@@ -8,175 +8,296 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <!-- Questão 1 -->
-        <button onclick="showQuestion('questionDiv1')">Mostrar Questão 1</button>
-        <div id="questionDiv1" class="question">
-            <p>1. Escreva um programa que declare uma variável para armazenar um número inteiro e outra variável para armazenar um número decimal. Em seguida, imprima o tipo de dado de cada variável.</p>
+        <div class="container">
+            <div class="title">Lista de Exercícios</div>
+            <!-- Questão 1 -->
+            <button class="button-30" role="button" onclick="showQuestion('questionDiv1')">Mostrar Questão 1</button>
+            <div id="questionDiv1" class="question">
+                <p>1. Escreva um programa que declare uma variável para armazenar um número inteiro e outra variável para armazenar um número decimal. Em seguida, imprima o tipo de dado de cada variável.</p>
+                <div class="input-group">
+                    <label for="numeroInteiro1">Número Inteiro:</label>
+                    <input type="text" id="numeroInteiro1" placeholder="Digite um número inteiro">
+                </div>
+                <div class="input-group">
+                    <label for="numeroDecimal1">Número Decimal:</label>
+                    <input type="text" id="numeroDecimal1" placeholder="Digite um número decimal">
+                </div>
+                <button class="button-30" role="button" onclick="q1()">Executar Código</button>
+                <div id="output1" class="result"></div>
+            </div>
+            <!-- Questão 2 -->
+            <button class="button-30" role="button" onclick="showQuestion('questionDiv2')">Mostrar Questão 2</button>
+            <div id="questionDiv2" class="question">
+                <p>2. Escreva um programa que solicite ao usuário o seu nome e sua idade e em seguida imprima essas informações juntas em uma única linha.</p>
+                <div class="input-group">
+                    <label for="nome2">Nome:</label>
+                    <input type="text" id="nome2" placeholder="Digite seu nome">
+                </div>
+                <div class="input-group">
+                    <label for="idade2">Idade:</label>
+                    <input type="text" id="idade2" placeholder="Digite sua idade">
+                </div>
+                <button class="button-30" role="button" onclick="q2()">Executar Código</button>
+                <div id="output2" class="result"></div>
+            </div>
+    
+            <!-- Questão 3 -->
+            <button class="button-30" role="button" onclick="showQuestion('questionDiv3')">Mostrar Questão 3</button>
+            <div id="questionDiv3" class="question">
+                <p>3. Escreva um programa que solicite ao usuário um número e converta-o para número usando parseInt(). Em seguida, exiba o número convertido no console.</p>
+                <div class="input-group">
+                    <label for="numero3">Número:</label>
+                    <input type="text" id="numero3" placeholder="Digite um número">
+                </div>
+                <button class="button-30" role="button" onclick="q3()">Executar Código</button>
+                <div id="output3" class="result"></div>
+        </div>
+    
+        <!-- Questão 4 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv4')">Mostrar Questão 4</button>
+        <div id="questionDiv4" class="question">
+            <p>4. Escreva um programa que peça ao usuário para digitar sua altura em metros e converta-a para número de ponto flutuante usando parseFloat(). Em seguida, exiba a altura convertida no console.</p>
             <div class="input-group">
-                <label for="numeroInteiro1">Número Inteiro:</label>
-                <input type="text" id="numeroInteiro1" placeholder="Digite um número inteiro">
+                <label for="altura4">Digite sua altura em metros:</label>
+                <input type="text" id="altura4" placeholder="Ex: 1.75">
+            </div>
+            <button class="button-30" role="button" onclick="q4()">Executar Código</button>
+            <div id="output4" class="result"></div>
+    
+        </div>
+    
+        <!-- Questão 5 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv5')">Mostrar Questão 5</button>
+        <div id="questionDiv5" class="question">
+            <p>5. Escreva um programa que solicite ao usuário sua idade e converta-a para número usando Number(). Em seguida, exiba a idade no console.</p>
+            <div class="input-group">
+                <label for="idade5">Digite a sua idade:</label>
+                <input type="text" id="idade5" placeholder="Ex: 50">
+            </div>
+            <button class="button-30" role="button" onclick="q5()">Executar Código</button>
+            <div id="output5" class="result"></div>
+        </div>
+    
+        <!-- Questão 6 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv6')">Mostrar Questão 6</button>
+        <div id="questionDiv6" class="question">
+            <p>6. Implemente um programa que determine se um número fornecido pelo usuário é par ou ímpar.</p>
+            <div class="input-group">
+                <label for="numero6">Digite um número:</label>
+                <input type="text" id="numero6" placeholder="Digite um número inteiro">
+            </div>
+            <button class="button-30" role="button" onclick="q6()">Executar Código</button>
+            <div id="output6" class="result"></div>
+        </div>
+    
+        <!-- Questão 7 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv7')">Mostrar Questão 7</button>
+        <div id="questionDiv7" class="question">
+            <p>7. Escreva um programa que peça ao usuário para inserir três números e, em seguida, imprima o maior deles.</p>
+            <div class="input-group">
+                <label for="numeroQ7-1">Digite o primeiro número:</label>
+                <input type="text" id="numeroQ7-1" placeholder="Digite o primeiro número">
             </div>
             <div class="input-group">
-                <label for="numeroDecimal1">Número Decimal:</label>
-                <input type="text" id="numeroDecimal1" placeholder="Digite um número decimal">
-            </div>
-            <button onclick="q1()">Executar Código</button>
-            <div id="output1" class="result"></div>
-        </div>
-        <!-- Questão 2 -->
-        <button onclick="showQuestion('questionDiv2')">Mostrar Questão 2</button>
-        <div id="questionDiv2" class="question">
-            <p>2. Escreva um programa que solicite ao usuário o seu nome e sua idade e em seguida imprima essas informações juntas em uma única linha.</p>
-            <div class="input-group">
-                <label for="nome2">Nome:</label>
-                <input type="text" id="nome2" placeholder="Digite seu nome">
+                <label for="numeroQ7-2">Digite o segundo número:</label>
+                <input type="text" id="numeroQ7-2" placeholder="Digite o segundo número">
             </div>
             <div class="input-group">
-                <label for="idade2">Idade:</label>
-                <input type="text" id="idade2" placeholder="Digite sua idade">
+                <label for="numeroQ7-3">Digite o terceiro número:</label>
+                <input type="text" id="numeroQ7-3" placeholder="Digite o terceiro número">
             </div>
-            <button onclick="q2()">Executar Código</button>
-            <div id="output2" class="result"></div>
+            <button onclick="q7()">Executar Código</button>
+            <div id="output7" class="result"></div>
         </div>
-
-        <!-- Questão 3 -->
-        <button onclick="showQuestion('questionDiv3')">Mostrar Questão 3</button>
-        <div id="questionDiv3" class="question">
-            <p>3. Escreva um programa que solicite ao usuário um número e converta-o para número usando parseInt(). Em seguida, exiba o número convertido no console.</p>
+    
+        <!-- Questão 8 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv8')">Mostrar Questão 8</button>
+        <div id="questionDiv8" class="question">
+            <p>8. Crie um programa que recebe três notas, calcula a média e informe se o aluno foi aprovado (média maior ou igual a 7) ou reprovado (média menor que 7).</p>
             <div class="input-group">
-                <label for="numero3">Número:</label>
-                <input type="text" id="numero3" placeholder="Digite um número">
+                <label for="notaQ8-1">Digite a primeira nota:</label>
+                <input type="text" id="notaQ8-1" placeholder="Digite a primeira nota">
             </div>
-            <button onclick="q3()">Executar Código</button>
-            <div id="output3" class="result"></div>
-    </div>
+            <div class="input-group">
+                <label for="notaQ8-2">Digite a segunda nota:</label>
+                <input type="text" id="notaQ8-2" placeholder="Digite a segunda nota">
+            </div>
+            <div class="input-group">
+                <label for="notaQ8-3">Digite a terceira nota:</label>
+                <input type="text" id="notaQ8-3" placeholder="Digite a terceira nota">
+            </div>
+            <button class="button-30" role="button" onclick="q8()">Executar Código</button>
+            <div id="output8" class="result"></div>
+        </div>
+    
+        <!-- Questão 9 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv9')">Mostrar Questão 9</button>
+        <div id="questionDiv9" class="question">
+            <p>9. Desenvolva um programa que receba o ano de nascimento de uma pessoa e informe se ela já é maior de idade ou não.</p>
+            <div class="input-group">
+                <label for="anoNascimento9">Digite o ano de nascimento:</label>
+                <input type="text" id="anoNascimento9" placeholder="EX: 2003">
+            </div>
+            <button class="button-30" role="button" onclick="q9()">Executar Código</button>
+            <div id="output9" class="result"></div>
+        </div>
+    
+        <!-- Questão 10 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv10')">Mostrar Questão 10</button>
+        <div id="questionDiv10" class="question">
+            <p>10. Faça um programa que converte uma temperatura de Celsius para Fahrenheit ou vice-versa, dependendo da escolha do usuário.</p>
+            <div class="input-group">
+                <label for="temperatura10">Digite a temperatura:</label>
+                <input type="text" id="temperatura10" placeholder="Digite a temperatura">
+            </div>
+            <div class="input-group">
+                <label for="escala10">Escolha a opção:</label>
+                <select id="escala10">
+                    <option value="celsius">Celsius para Fahrenheit</option>
+                    <option value="fahrenheit">Fahrenheit para Celsius</option>
+                </select>
+            <button class="button-30" role="button" onclick="q10()">Executar Código</button>
+            <div id="output10" class="result"></div>
+        </div>
+        </div>
+        <!-- Questão 11 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv11')">Mostrar Questão 11</button>
+        <div id="questionDiv11" class="question">
+            <p>11. Escreva um programa que solicite dois números ao usuário e verifique se pelo menos um deles é múltiplo do outro. Se pelo menos um for múltiplo, exiba a mensagem “Pelo menos um dos números é múltiplo do outro”. Caso contrário, exiba a mensagem “Nenhum dos números é múltiplo do outro”.</p>
+            <div class="input-group">
+                <label for="numeroQ11-1">Digite o primeiro número:</label>
+                <input type="text" id="numeroQ11-1" placeholder="Digite o primeiro número">
+            </div>
+            <div class="input-group">
+                <label for="numeroQ11-2">Digite o segundo número:</label>
+                <input type="text" id="numeroQ11-2" placeholder="Digite o segundo número">
+            </div>
+            <button class="button-30" role="button" onclick="q11()">Executar Código</button>
+            <div id="output11" class="result"></div>
+        </div>
+    
+        <!-- Questão 12 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 12</button>
+        
+         <!-- Questão 13 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 13</button>
 
-    <!-- Questão 4 -->
-    <button onclick="showQuestion('questionDiv4')">Mostrar Questão 4</button>
-    <div id="questionDiv4" class="question">
-        <p>4. Escreva um programa que peça ao usuário para digitar sua altura em metros e converta-a para número de ponto flutuante usando parseFloat(). Em seguida, exiba a altura convertida no console.</p>
-        <div class="input-group">
-            <label for="altura4">Digite sua altura em metros:</label>
-            <input type="text" id="altura4" placeholder="Ex: 1.75">
-        </div>
-        <button onclick="q4()">Executar Código</button>
-        <div id="output4" class="result"></div>
+          <!-- Questão 14 -->
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 14</button>
 
-    </div>
+         <!-- Questão 15 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 15</button>
 
-    <!-- Questão 5 -->
-    <button onclick="showQuestion('questionDiv5')">Mostrar Questão 5</button>
-    <div id="questionDiv5" class="question">
-        <p>5. Escreva um programa que solicite ao usuário sua idade e converta-a para número usando Number(). Em seguida, exiba a idade no console.</p>
-        <div class="input-group">
-            <label for="idade5">Digite a sua idade:</label>
-            <input type="text" id="idade5" placeholder="Ex: 50">
-        </div>
-        <button onclick="q5()">Executar Código</button>
-        <div id="output5" class="result"></div>
-    </div>
+         <!-- Questão 16 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 16</button>
 
-    <!-- Questão 6 -->
-    <button onclick="showQuestion('questionDiv6')">Mostrar Questão 6</button>
-    <div id="questionDiv6" class="question">
-        <p>6. Implemente um programa que determine se um número fornecido pelo usuário é par ou ímpar.</p>
-        <div class="input-group">
-            <label for="numero6">Digite um número:</label>
-            <input type="text" id="numero6" placeholder="Digite um número inteiro">
-        </div>
-        <button onclick="q6()">Executar Código</button>
-        <div id="output6" class="result"></div>
-    </div>
+         <!-- Questão 17 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 17</button>
+         
+         <!-- Questão 18 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 18</button>
 
-    <!-- Questão 7 -->
-    <button onclick="showQuestion('questionDiv7')">Mostrar Questão 7</button>
-    <div id="questionDiv7" class="question">
-        <p>7. Escreva um programa que peça ao usuário para inserir três números e, em seguida, imprima o maior deles.</p>
-        <div class="input-group">
-            <label for="numeroQ7-1">Digite o primeiro número:</label>
-            <input type="text" id="numeroQ7-1" placeholder="Digite o primeiro número">
-        </div>
-        <div class="input-group">
-            <label for="numeroQ7-2">Digite o segundo número:</label>
-            <input type="text" id="numeroQ7-2" placeholder="Digite o segundo número">
-        </div>
-        <div class="input-group">
-            <label for="numeroQ7-3">Digite o terceiro número:</label>
-            <input type="text" id="numeroQ7-3" placeholder="Digite o terceiro número">
-        </div>
-        <button onclick="q7()">Executar Código</button>
-        <div id="output7" class="result"></div>
-    </div>
+         <!-- Questão 19 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 19</button>
 
-    <!-- Questão 8 -->
-    <button onclick="showQuestion('questionDiv8')">Mostrar Questão 8</button>
-    <div id="questionDiv8" class="question">
-        <p>8. Crie um programa que recebe três notas, calcula a média e informe se o aluno foi aprovado (média maior ou igual a 7) ou reprovado (média menor que 7).</p>
-        <div class="input-group">
-            <label for="notaQ8-1">Digite a primeira nota:</label>
-            <input type="text" id="notaQ8-1" placeholder="Digite a primeira nota">
-        </div>
-        <div class="input-group">
-            <label for="notaQ8-2">Digite a segunda nota:</label>
-            <input type="text" id="notaQ8-2" placeholder="Digite a segunda nota">
-        </div>
-        <div class="input-group">
-            <label for="notaQ8-3">Digite a terceira nota:</label>
-            <input type="text" id="notaQ8-3" placeholder="Digite a terceira nota">
-        </div>
-        <button onclick="q8()">Executar Código</button>
-        <div id="output8" class="result"></div>
-    </div>
+         <!-- Questão 20 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 20</button>
+        
+         <!-- Questão 21 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 21</button>
 
-    <!-- Questão 9 -->
-    <button onclick="showQuestion('questionDiv9')">Mostrar Questão 9</button>
-    <div id="questionDiv9" class="question">
-        <p>9. Desenvolva um programa que receba o ano de nascimento de uma pessoa e informe se ela já é maior de idade ou não.</p>
-        <div class="input-group">
-            <label for="anoNascimento9">Digite o ano de nascimento:</label>
-            <input type="text" id="anoNascimento9" placeholder="EX: 2003">
-        </div>
-        <button onclick="q9()">Executar Código</button>
-        <div id="output9" class="result"></div>
-    </div>
+         <!-- Questão 22 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 22</button>
 
-    <!-- Questão 10 -->
-    <button onclick="showQuestion('questionDiv10')">Mostrar Questão 10</button>
-    <div id="questionDiv10" class="question">
-        <p>10. Faça um programa que converte uma temperatura de Celsius para Fahrenheit ou vice-versa, dependendo da escolha do usuário.</p>
-        <div class="input-group">
-            <label for="temperatura10">Digite a temperatura:</label>
-            <input type="text" id="temperatura10" placeholder="Digite a temperatura">
-        </div>
-        <div class="input-group">
-            <label for="escala10">Escolha a opção:</label>
-            <select id="escala10">
-                <option value="celsius">Celsius para Fahrenheit</option>
-                <option value="fahrenheit">Fahrenheit para Celsius</option>
-            </select>
-        <button onclick="q10()">Executar Código</button>
-        <div id="output10" class="result"></div>
-    </div>
-    </div>
-    <!-- Questão 11 -->
-    <button onclick="showQuestion('questionDiv11')">Mostrar Questão 11</button>
-    <div id="questionDiv11" class="question">
-        <p>11. Escreva um programa que solicite dois números ao usuário e verifique se pelo menos um deles é múltiplo do outro. Se pelo menos um for múltiplo, exiba a mensagem “Pelo menos um dos números é múltiplo do outro”. Caso contrário, exiba a mensagem “Nenhum dos números é múltiplo do outro”.</p>
-        <div class="input-group">
-            <label for="numeroQ11-1">Digite o primeiro número:</label>
-            <input type="text" id="numeroQ11-1" placeholder="Digite o primeiro número">
-        </div>
-        <div class="input-group">
-            <label for="numeroQ11-2">Digite o segundo número:</label>
-            <input type="text" id="numeroQ11-2" placeholder="Digite o segundo número">
-        </div>
-        <button onclick="q11()">Executar Código</button>
-        <div id="output11" class="result"></div>
-    </div>
+         <!-- Questão 23 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 23</button>
 
-    <!-- Questão 12 -->
-    <button onclick="showQuestion('questionDiv12')">Mostrar Questão 12</button>
-    <script></script>
+         <!-- Questão 24 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 24</button>
+
+         <!-- Questão 25 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 25</button>
+
+         <!-- Questão 26 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 26</button>
+
+         <!-- Questão 27 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 27</button>
+
+         <!-- Questão 28 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 28</button>
+
+         <!-- Questão 29 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 29</button>
+
+         <!-- Questão 30 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 30</button>
+
+          <!-- Questão 31 -->
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 31</button>
+
+           <!-- Questão 32 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 32</button>
+
+          <!-- Questão 33 -->
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 33</button>
+
+           <!-- Questão 34 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 34</button>
+
+          <!-- Questão 35 -->
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 35</button>
+
+           <!-- Questão 36 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 36</button>
+
+          <!-- Questão 37 -->
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 37</button>
+
+           <!-- Questão 38 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 38</button>
+
+          <!-- Questão 39 -->
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 39</button>
+
+           <!-- Questão 40 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 40</button>
+
+         <!-- Questão 41 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 41</button>
+
+         <!-- Questão 42 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 42</button>
+
+         <!-- Questão 43 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 43</button>
+
+         <!-- Questão 44 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 44</button>
+
+         <!-- Questão 45 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 45</button>
+
+         <!-- Questão 46 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 46</button>
+
+         <!-- Questão 47 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 47</button>
+
+         <!-- Questão 48 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 48</button>
+
+         <!-- Questão 49 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 49</button>
+
+         <!-- Questão 50 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 50</button>
+
+         <!-- Questão 51 -->
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 51</button>
+
+         
+        
+    </div>
 </body>
 </html>
