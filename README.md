@@ -6,7 +6,7 @@
 ## **Prévia**
 
 * Você pode acessar esse site e testa-lo através deste [link](https://guilhqueiroz.github.io/ListaDeQuestoes/)
-<img https://drive.google.com/uc?export=download&id=4fbDFhasWJ05wKk-WTA85T1kXUzBMs>
+<img src="https://drive.google.com/uc?export=download&id=4fbDFhasWJ05wKk-WTA85T1kXUzBMs">
 
 ### Entre em contato comigo: 
 
