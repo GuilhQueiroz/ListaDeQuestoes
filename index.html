@@ -6,6 +6,7 @@
     <title>Lista De Questões</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
+    <link rel="icon" href="./assets/img/lista-de-exercicio-bg.jpg" type="image/x-icon">
 </head>
 <body>
         <div class="container">
@@ -314,7 +315,7 @@
             <div id="questionDiv19" class="question">
                 <p>19. Crie uma página HTML com um cabeçalho h1, um botão. Ao clicar no botão,  altere o texto do cabeçalho para “A mágica em JS continua!”.</p>
                 <div class="input-group">
-                    <h1  id="numero19">Clique no botão para ver a mágica!</h1>
+                    <h1 style="text-align: center;" id="numero19">Clique no botão "Exibir o resultado" para ver a mágica!</h1>
                 </div>
                 <button class="button-30" role="button" onclick="q19()">Exibir o resultado</button>
                 <button class="button-30" onclick="showCode('codigo19', q19Codigo)">Exibir o código</button>
@@ -349,24 +350,108 @@
 
          <!-- Questão 22 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv22')">Mostrar Questão 22</button>
+            <div id="questionDiv22" class="question">
+                <p>22. Crie uma página com uma imagem de uma criança (ex: “crianca.jpg”) e um  botão “Crescer”. Crie uma função chamada trocarImagem. Nessa função,  altere a propriedade src da imagem para “adulto.jpg”. Chame a função  trocarImagem no onclick do botão Crescer. Escreva ainda um log no console  com a mensagem “Imagem trocada com sucesso!”.</p>
+                <div class="input-group">
+                    <img src="https://lillo.com.br/pub/media/magefan_blog/2017/04/a-crianca-de-2-anos.jpg" alt="Criança" id="imagem22" style="max-width: 100%; height: auto;">
+                    <button id="numero22" class="button-30" onclick="q22()">Exibir o resultado</button>
+                </div>
+                <button class="button-30" onclick="showCode('codigo22', q22Codigo)">Exibir o código</button>
+                <div id="output22" class="result"></div>
+                <pre id="codigo22" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 23 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv23')">Mostrar Questão 23</button>
+            <div id="questionDiv23" class="question">
+                <p>23. Crie uma página contendo 3 botões (Pequena, Média e Grande) e uma  imagem. Ao clicar no botão Pequena, altere o tamanho da imagem para  100x100px. Ao clicar no botão Média, altere o tamanho da imagem para  300x300px. Ao clicar no botão Grande, altere o tamanho da imagem para  500x500px.</p>
+                <div class="input-group">
+                    <img src="https://lillo.com.br/pub/media/magefan_blog/2017/04/a-crianca-de-2-anos.jpg" alt="Criança" id="imagem23" style="max-width: 100%; height: auto;">
+                    <button id="numero23" class="button-30" onclick="q23(100, 100)">Pequena</button>
+                    <button id="numero23" class="button-30" onclick="q23(300, 300)">Média</button>
+                    <button id="numero23" class="button-30" onclick="q23(500, 500)">Grande</button>
+                </div>
+                <button class="button-30" onclick="showCode('codigo23', q23Codigo)">Exibir o código</button>
+                <div id="output23" class="result"></div>
+                <pre id="codigo23" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 24 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv24')">Mostrar Questão 24</button>
+            <div id="questionDiv24" class="question">
+                <p>24. Crie uma página contendo 3 miniaturas de imagens e uma div. Ao clicar  em cada imagem, a imagem clicada deve aparecer no seu tamanho  original na div.</p>
+                <div class="thumbnails">
+                    <img src="https://image.api.playstation.com/cdn/UP0700/CUSA08692_00/JxilRmpXkS3CCXUnr0gZTBOlqso3plaw.png" alt="dark souls" id="imagem24-1" onclick="q24('https://image.api.playstation.com/cdn/UP0700/CUSA08692_00/JxilRmpXkS3CCXUnr0gZTBOlqso3plaw.png')">
+                    <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/capsule_616x353.jpg?t=1700660721" alt="dark souls 2" id="imagem24-2" onclick="q24('https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/capsule_616x353.jpg?t=1700660721')">
+                    <img src="https://assets.nuuvem.com/image/upload/t_product_sharing_banner/v1/products/5703b88ed27734565a000045/sharing_images/khotnvdk8lir2sjxmfst.jpg" alt="dark souls 3" id="imagem24-3" onclick="q24('https://assets.nuuvem.com/image/upload/t_product_sharing_banner/v1/products/5703b88ed27734565a000045/sharing_images/khotnvdk8lir2sjxmfst.jpg')">
+                </div>
+                <div class="display" id="display">
+                    <img id="imagemDisplay" src="" alt="imagem grande">
+                </div>
+                <button class="button-30" onclick="showCode('codigo24', q24Codigo)">Exibir o código</button>
+                <div id="output24" class="result"></div>
+                <pre id="codigo24" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 25 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv25')">Mostrar Questão 25</button>
+            <div id="questionDiv25" class="question">
+                <p>25. Crie um código JavaScript que utilize pelo menos três funções predefinidas diferentes para realizar uma tarefa específica</p>
+                <div class="input-group">
+                    <h1 style="text-align: center;">Cálculo de Média</h1>
+                    <p>Insira os números separados por vírgula:</p>
+                    <input type="text" id="numero25" placeholder="Ex: 5, 6, 7, 8">
+                </div>
+                <button class="button-30" role="button" onclick="q25()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo25', q25Codigo)">Exibir o código</button>
+                <div id="output25" class="result"></div>
+                <pre id="codigo25" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 26 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv26')">Mostrar Questão 26</button>
+            <div id="questionDiv26" class="question">
+                <p>26. Escreva uma função simples que exiba uma mensagem na tela e chame-a para ver o resultado.</p>
+                <div class="input-group">
+                </div>
+                <button class="button-30" role="button" onclick="q26()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo26', q26Codigo)">Exibir o código</button>
+                <div id="output26" class="result"></div>
+                <pre id="codigo26" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 27 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv27')">Mostrar Questão 27</button>
+            <div id="questionDiv27" class="question">
+                <p>27. Crie uma função que receba três números como parâmetros, calcula a média deles e exiba o resultado.</p>
+                <div class="input-group">
+                    <h1 style="text-align: center;">Calcular média de três números</h1>
+                    <label for="numeroQ27-1">Digite o primeira número:</label>
+                    <input type="text" id="numeroQ27-1" placeholder="Digite um número">
+                    <label for="numero27-2">Digite o segunda número:</label>
+                    <input type="text" id="numeroQ27-2" placeholder="Digite um número">
+                    <label for="numero27-3">Digite o terceira número:</label>
+                    <input type="text" id="numeroQ27-3" placeholder="Digite um número">
+                </div>
+                <button class="button-30" role="button" onclick="q27()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo27', q27Codigo)">Exibir o código</button>
+                <div id="output27" class="result"></div>
+                <pre id="codigo27" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 28 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv28')">Mostrar Questão 28</button>
+            <div id="questionDiv28" class="question">
+                <p>28. Escreva uma função que receba um número como parâmetro e retorne o quadrado desse número.</p>
+                <div class="input-group">
+                    <label for="numeroQ28">Digite um número:</label>
+                    <input type="text" id="numeroQ28" placeholder="Digite um número">
+                </div>
+                <button class="button-30" role="button" onclick="q28()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo28', q28Codigo)">Exibir o código</button>
+                <div id="output28" class="result"></div>
+                <pre id="codigo28" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 29 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv29')">Mostrar Questão 29</button>
@@ -376,12 +461,58 @@
 
           <!-- Questão 31 -->
           <button class="button-30" role="button" onclick="showQuestion('questionDiv31')">Mostrar Questão 31</button>
+          <div id="questionDiv31" class="question">
+            <p>31. Usando funções, crie um programa que solicita dois números ao usuário, calcula sua média e exibe o resultado.</p>
+            <div class="input-group">
+                <h1 style="text-align: center;">Calcular média de dois números</h1>
+                <label for="numeroQ31-1">Digite um número:</label>
+                <input type="text" id="numeroQ31-1" placeholder="Digite um número">
+                <label for="numeroQ31-2">Digite outro número:</label>
+                <input type="text" id="numeroQ31-2" placeholder="Digite outro número">
+            </div>
+            <button class="button-30" role="button" onclick="q31()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo31', q31Codigo)">Exibir o código</button>
+            <div id="output31" class="result"></div>
+            <pre id="codigo31" class="codigo"><code class="language-javascript"></code></pre>
+        </div>
 
            <!-- Questão 32 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv33')">Mostrar Questão 32</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv32')">Mostrar Questão 32</button>
+         <div id="questionDiv32" class="question">
+            <p>32. Use funções para implementar um jogo de adivinhação onde o computador gera um número aleatório entre 1 e 100 e o usuário tem que adivinhar qual é em até 10 tentativas. Verifique se cada palpite do usuário está correto, menor ou maior que o número secreto. Exiba mensagens informando o resultado de cada tentativa e forneça pistas (menor/maior) para ajudar o usuário..</p>
+            <div class="input-group">
+                <h1 style="text-align: center;">Jogo de Adivinhação</h1>
+                <p style="text-align: center;">Tente adivinhar o número secreto entre 1 e 100.</p>
+                <p style="text-align: center;">Você tem 10 tentativas.</p>
+                <input type="number" id="palpiteQ32" placeholder="Digite seu palpite">
+            </div>
+            <button class="button-30" role="button" onclick="q32()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo32', q32Codigo)">Exibir o código</button>
+            <div id="output32" class="result"></div>
+            <pre id="codigo32" class="codigo"><code class="language-javascript"></code></pre>
+        </div>
 
           <!-- Questão 33 -->
           <button class="button-30" role="button" onclick="showQuestion('questionDiv33')">Mostrar Questão 33</button>
+            <div id="questionDiv33" class="question">
+                <p>33. Crie uma calculadora que faça a adição, subtração, multiplicação ou divisão de dois números. Use funções separadas para cada operação e para exibir o resultado.</p>
+                <div class="input-group">
+                    <h1 style="text-align: center;">Calculadora Simples</h1>
+                    <label for="numeroQ33-1">Digite um número:</label>
+                    <input type="number" id="numeroQ33-1">
+                </div>
+                <div class="input-group">
+                    <label for="numeroQ33-2">Digite outro número:</label>
+                    <input type="number" id="numeroQ33-2">
+                </div>
+                <button class="button-30" role="button" onclick="q33('+')">Adição (+)</button>
+                <button class="button-30" role="button" onclick="q33('-')">Subtração (-)</button>
+                <button class="button-30" role="button" onclick="q33('*')">Multiplicação (*)</button>
+                <button class="button-30" role="button" onclick="q33('/')">Divisão (/)</button>
+                <button class="button-30" onclick="showCode('codigo33', q33Codigo)">Exibir o código</button>
+                <div id="output33" class="result"></div>
+                <pre id="codigo33" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
            <!-- Questão 34 -->
          <button class="button-30" role="button" onclick="showQuestion('questionDiv34')">Mostrar Questão 34</button>
@@ -440,6 +571,14 @@
          
         
     </div>
+    <footer>
+        <div>
+            <a href="https://github.com/GuilhQueiroz" target="_blank"><img src="https://img.shields.io/badge/github-12100E.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+            <a href="mailto:guiguimaraes.dev@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+            <a href="https://www.instagram.com/guilh.guimaraes/?next=%2F" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?logo=instagram&logoColor=white&style=for-the-badge" target="_blank"></a>
+        </div>
+        <p >Copyright © GuilhQueiroz 2024</p>
+      </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
     <script src="script.js"></script>

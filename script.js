@@ -1175,30 +1175,255 @@ function showQ21() {
 
 function q22() {
 
+    let imagem = document.getElementById('imagem22');
+    imagem.src = 'https://www.uninabuco.edu.br/sites/joaquimnabuco.edu.br/files/fields/imagemTopo/noticias/2018/01/2542_0.jpg';
 }
 
-function q23() {
+function q22Codigo() {
+
+    let codigo = `
+    function q22() {
+
+    let imagem = document.getElementById('imagem22');
+    imagem.src = 'https://www.uninabuco.edu.br/sites/joaquimnabuco.edu.br/files/fields/imagemTopo/noticias/2018/01/2542_0.jpg';
+}`;
+
+    let codigoElement = document.getElementById('codigo22');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
+}
+
+function q23(largura, altura) {
+
+    let imagem = document.getElementById('imagem23');
+    imagem.style.width = largura + 'px';
+    imagem.style.height = altura + 'px';
+}
+
+function q23Codigo() {
+
+    let codigo = `
+    function q23(largura, altura) {
+
+    let imagem = document.getElementById('imagem23');
+    imagem.style.width = largura + 'px';
+    imagem.style.height = altura + 'px';
+}`;
+
+    let codigoElement = document.getElementById('codigo23');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 
 }
 
-function q24() {
+function q24(src) {
 
+    let imagem = document.getElementById('imagemDisplay');
+    imagem.src = src;
+}
+
+function q24Codigo() {
+
+    let codigo = `
+    function q24(src) {
+
+    let imagem = document.getElementById('imagemDisplay');
+    imagem.src = src;
+}`;
+
+    let codigoElement = document.getElementById('codigo24');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 }
 
 function q25() {
+
+    // Obter os dados inseridos pelo usuário
+    let numero = document.getElementById('numero25').value;
+
+    // dividir a string em um array de substrings
+    let numerosArray = numero.split(',');
+
+    // converter o array de strings em um array de números
+    let numeros = numerosArray.map(Number);
+
+    // calcular a soma dos números
+
+    let soma = numeros.reduce((acc, curr) => acc + curr, 0);
+
+    // calcular a média dos números
+    let media = soma / numeros.length;
+
+    // arredondar a média para 2 casas decimais
+    let mediaArredondada = media.toFixed(2);
+
+    // obter a data e hora atuais
+    let dataAtual = new Date();
+    let dataFormatada = dataAtual.toLocaleString('pt-BR');
+
+    // mostrar os resultados
+    let resultado = document.getElementById('output25');
+    resultado.innerHTML = `Soma: ${soma}, Média: ${mediaArredondada}, Data e Hora: ${dataFormatada}`;
+
+}
+
+function q25Codigo() {
+
+    let codigo = `
+    function q25() {
+
+    // Obter os dados inseridos pelo usuário
+    let numero = document.getElementById('numero25').value;
+
+    // dividir a string em um array de substrings
+    let numerosArray = numero.split(',');
+
+    // converter o array de strings em um array de números
+    let numeros = numerosArray.map(Number);
+
+    // calcular a soma dos números
+
+    let soma = numeros.reduce((acc, curr) => acc + curr, 0);
+
+    // calcular a média dos números
+    let media = soma / numeros.length;
+
+    // arredondar a média para 2 casas decimais
+    let mediaArredondada = media.toFixed(2);
+
+    // obter a data e hora atuais
+    let dataAtual = new Date();
+    let dataFormatada = dataAtual.toLocaleString('pt-BR');
+
+    // mostrar os resultados
+    let resultado = document.getElementById('output25');
+    resultado.innerHTML = 'Soma: ' + soma + ', Média: ' + mediaArredondada + ', Data e Hora: ' + dataFormatada;
+}`;
+
+    let codigoElement = document.getElementById('codigo25');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 
 }
 
 function q26() {
 
+    alert('Mensagem de teste');
+}
+
+function q26Codigo() {
+
+    let codigo = `
+    function q26() {
+    alert('Mensagem de teste');
+}`;
+
+    let codigoElement = document.getElementById('codigo26');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 }
 
 function q27() {
+    // Obter os dados inseridos pelo usuário
+    let num1 = parseFloat(document.getElementById('numeroQ27-1').value);
+    let num2 = parseFloat(document.getElementById('numeroQ27-2').value);
+    let num3 = parseFloat(document.getElementById('numeroQ27-3').value);
 
+    // Verificar se os números são válidos
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        document.getElementById('output27').innerHTML = 'Por favor, insira números válidos.';
+        return;
+    }
+
+    // Calcular a média
+    let media = (num1 + num2 + num3) / 3;
+
+    // Mostrar a média
+    document.getElementById('output27').innerHTML = `A média dos números ${num1}, ${num2} e ${num3} é: é ${media.toFixed(2)}`;
+}
+
+function q27Codigo() {
+
+    let codigo = `
+    function q27() {
+    // Obter os dados inseridos pelo usuário
+    let num1 = parseFloat(document.getElementById('numeroQ27-1').value);
+    let num2 = parseFloat(document.getElementById('numeroQ27-2').value);
+    let num3 = parseFloat(document.getElementById('numeroQ27-3').value);
+
+    // Verificar se os números são válidos
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        document.getElementById('output27').innerHTML = 'Por favor, insira números válidos.';
+        return;
+    }
+
+    // Calcular a média
+    let media = (num1 + num2 + num3) / 3;
+
+    // Mostrar a média
+    document.getElementById('output27').innerHTML = 'A média dos números + num1, + num2 e + num3 é: é + media.toFixed(2)}';
+}`;
+
+    let codigoElement = document.getElementById('codigo27');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 }
 
 function q28() {
 
+    // Obter os dados inseridos pelo usuário
+    let numero = parseInt(document.getElementById('numeroQ28').value);
+
+    // Verificar se o número é válido
+    if (isNaN(numero)) {
+        document.getElementById('output28').innerHTML = 'Por favor, insira um número válido.';
+        return;
+    }
+
+    // Calcular o quadrado do número
+    let quadrado = numero * numero;
+
+    // Mostrar o resultado
+    document.getElementById('output28').innerHTML = `O quadrado de ${numero} é ${quadrado}`;
+}
+
+function q28Codigo() {
+
+    let codigo = `
+    function q28() {
+    // Obter os dados inseridos pelo usuário
+    let numero = parseInt(document.getElementById('numeroQ28').value);
+
+    // Verificar se o número é válido
+    if (isNaN(numero)) {
+        document.getElementById('output28').innerHTML = 'Por favor, insira um número válido.';
+        return;
+    }
+
+    // Calcular o quadrado do número
+    let quadrado = numero * numero;
+
+    // Mostrar o resultado
+    document.getElementById('output28').innerHTML = 'O quadrado de ' + numero + ' é ' + quadrado;
+}`;
+
+    let codigoElement = document.getElementById('codigo28');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 }
 
 function q29() {
@@ -1210,14 +1435,261 @@ function q30() {
 }
 
 function q31() {
+    
+    // obter os dados inseridos pelo usuário
+    let num1 = parseFloat(document.getElementById('numeroQ31-1').value);
+    let num2 = parseFloat(document.getElementById('numeroQ31-2').value);
 
+    // verificar se os números são válidos
+    if (isNaN(num1) || isNaN(num2)) {
+        document.getElementById('output31').innerHTML = 'Por favor, insira números válidos.';
+        return;
+    }
+
+    // Chamando a função para calcular a média
+    let media = calcularMediaQ31(num1, num2);
+
+    // Mostrar o resultado
+    document.getElementById('output31').innerHTML = `A média dos números ${num1} e ${num2} é: ${media.toFixed(2)}`;
 }
+
+function calcularMediaQ31(num1, num2) {
+    return (num1 + num2) / 2;
+}
+
+function q31Codigo() {
+    
+        let codigo = `
+        function q31() {
+        
+        // obter os dados inseridos pelo usuário
+        let num1 = parseFloat(document.getElementById('numeroQ31-1').value);.
+        let num2 = parseFloat(document.getElementById('numeroQ31-2').value);
+    
+        // verificar se os números são válidos
+        if (isNaN(num1) || isNaN(num2)) {
+            document.getElementById('output31').innerHTML = 'Por favor, insira números válidos.';
+            return;
+        }
+    
+        // Chamando a função para calcular a média
+        let media = calcularMediaQ31(num1, num2);
+    
+        // Mostrar o resultado
+        document.getElementById('output31').innerHTML = 'A média dos números ' + num1 + ' e ' + num2 + ' é: ' + media.toFixed(2);
+    }
+
+    function calcularMediaQ31(num1, num2) {
+        return (num1 + num2) / 2;
+    }`;
+
+    let codigoElement = document.getElementById('codigo31');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
+    
+}
+
+// Questão 32 - Gerando um número aleatório entre 1 e 100
+const numeroAleatorioQ32 = Math.floor(Math.random() * 100) + 1;
 
 function q32() {
 
+    // Verificar o palpite do usuário
+    let palpite = parseInt(document.getElementById('palpiteQ32').value);
+
+    // Verificar se o palpite é válido
+    if (isNaN(palpite) || palpite < 1 || palpite > 100) {
+        document.getElementById('output32').innerHTML = 'Por favor, insira um número entre 1 e 100.';
+        return;
+    }
+
+    // reduzir o número de tentativas
+    tentativasRestantes--;
+
+    // Verificar se o palpite é correto
+    if (palpite == numeroAleatorioQ32) {
+        resultadoPalpite(`Parabéns! Você acertou o número ${numeroAleatorioQ32} em ${10 - tentativasRestantes} tentativas.`);
+    } else {
+        // Verificar se maior ou menor
+        let mensagem = palpite < numeroAleatorioQ32 ? 'Tente um número maior.' : 'Tente um número menor.';
+        resultadoPalpite(`Seu palpite de ${palpite} está incorreto. ${mensagem} Tentativas restantes: ${tentativasRestantes}.`);
+    }
+    
+    if (tentativasRestantes === 0 && palpite !== numeroAleatorioQ32) {
+        resultadoPalpite(`Suas tentativas acabaram. O número secreto era ${numeroAleatorioQ32}.`);
+    }
 }
 
-function q33() {
+function resultadoPalpite(mensagem) {
+    document.getElementById('output32').innerHTML += `<p>${mensagem}</p>`;
+}
+
+function q32Codigo() {
+        
+        let codigo = `
+        // Questão 32 - Gerando um número aleatório entre 1 e 100
+        const numeroAleatorioQ32 = Math.floor(Math.random() * 100) + 1;
+    
+        function q32() {
+    
+            // Verificar o palpite do usuário
+            let palpite = parseInt(document.getElementById('palpiteQ32').value);
+    
+            // Verificar se o palpite é válido
+            if (isNaN(palpite) || palpite < 1 || palpite > 100) {
+                document.getElementById('output32').innerHTML = 'Por favor, insira um número entre 1 e 100.';
+                return;
+            }
+    
+            // reduzir o número de tentativas
+            tentativasRestantes--;
+    
+            // Verificar se o palpite é correto
+            if (palpite == numeroAleatorioQ32) {
+                resultadoPalpite('Parabéns! Você acertou o número + numeroAleatorioQ32 + em + 10 - tentativasRestantes + ' tentativas.');
+            } else {
+                // Verificar se maior ou menor
+                let mensagem = palpite < numeroAleatorioQ32 ? 'Tente um número maior.' : 'Tente um número menor.';
+                resultadoPalpite('Seu palpite de ' + palpite + ' está incorreto. ' + mensagem + ' Tentativas restantes: ' + tentativasRestantes + '.');
+            }
+            
+            if (tentativasRestantes === 0 && palpite !== numeroAleatorioQ32) {
+                resultadoPalpite('Suas tentativas acabaram. O número secreto era ' + numeroAleatorioQ32 + '.');
+            }
+        }
+    
+        function resultadoPalpite(mensagem) {
+            document.getElementById('output32').innerHTML += '<p>' + mensagem + '</p>';
+        }`;
+    
+        let codigoElement = document.getElementById('codigo32');
+        codigoElement.innerHTML = '';
+        codigoElement.textContent = codigo;
+    
+        Prism.highlightElement(codigoElement);
+    
+}
+
+
+function q33(operacao) {
+
+    let num1 = parseFloat(document.getElementById('numeroQ33-1').value);
+    let num2 = parseFloat(document.getElementById('numeroQ33-2').value);
+
+    switch (operacao) {
+
+        case '+':
+            adicao(num1, num2);
+            break;
+
+        case '-':
+            subtracao(num1, num2);
+            break;
+
+        case '*':
+            multiplicacao(num1, num2);
+            break;
+
+        case '/':
+            divisao(num1, num2);
+            break;
+
+        default:
+            document.getElementById('output33').innerHTML = 'Operação inválida.';
+
+    }
+            
+}
+
+function adicao(num1, num2) {
+    resultadoQ33(num1 + num2, '+');
+}
+
+function subtracao(num1, num2) {
+    resultadoQ33(num1 - num2, '-');
+}
+
+function multiplicacao(num1, num2) {
+    resultadoQ33(num1 * num2, '*');
+}
+
+function divisao(num1, num2) {
+    if (num2 === 0) {
+        document.getElementById('output33').innerHTML = 'Não é possível dividir por zero.';
+        return;
+    }
+    resultadoQ33(num1 / num2, '/');
+}
+
+function resultadoQ33(resultado, operacao) {
+    document.getElementById('output33').innerHTML = `${resultado.toFixed(2)} (Operação: ${operacao})`;
+}
+
+function q33Codigo() {
+
+    let codigo = `
+    function q33(operacao) {
+
+        let num1 = parseFloat(document.getElementById('numeroQ33-1').value);
+        let num2 = parseFloat(document.getElementById('numeroQ33-2').value);
+    
+        switch (operacao) {
+    
+            case '+':
+                adicao(num1, num2);
+                break;
+    
+            case '-':
+                subtracao(num1, num2);
+                break;
+    
+            case '*':
+                multiplicacao(num1, num2);
+                break;
+    
+            case '/':
+                divisao(num1, num2);
+                break;
+    
+            default:
+                document.getElementById('output33').innerHTML = 'Operação inválida.';
+    
+        }
+                
+    }
+    
+    function adicao(num1, num2) {
+        resultadoQ33(num1 + num2, '+');
+    }
+    
+    function subtracao(num1, num2) {
+        resultadoQ33(num1 - num2, '-');
+    }
+    
+    function multiplicacao(num1, num2) {
+        resultadoQ33(num1 * num2, '*');
+    }
+    
+    function divisao(num1, num2) {
+        if (num2 === 0) {
+            document.getElementById('output33').innerHTML = 'Não é possível dividir por zero.';
+            return;
+        }
+        resultadoQ33(num1 / num2, '/');
+    }
+    
+    function resultadoQ33(resultado, operacao) {
+        document.getElementById('output33').innerHTML = resultado.toFixed(2) + ' (Operação: ' + operacao + ')';
+    }`;
+
+    let codigoElement = document.getElementById('codigo33');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
+
 
 }
 
