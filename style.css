@@ -293,3 +293,8 @@ body {
   flex-direction: column;
 }
 
+main {
+  flex: 1; 
+  padding: 20px;
+  text-align: center;
+}
