@@ -16,6 +16,7 @@ body {
   border-radius: 8px;
   background-color: #ecf0f1; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 }
 .title {
   text-align: center;
@@ -24,6 +25,34 @@ body {
   font-weight: bold;
   color: #2c3e50;
 }
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%232c3e50" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 10px;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.option {
+  padding: 10px;
+}
+
 .buttons-container {
   display: flex;
   flex-wrap: wrap;
@@ -96,7 +125,27 @@ body {
   border-radius: 4px;
   background-color: #bdc3c7;
   color: #2c3e50;
+  flex: 1;
+  margin-right: 20px;
 }
+
+.codigo {
+  flex: 1;
+  white-space: pre-wrap; /* Para manter a formatação do código */
+}
+
+.imagem-container {
+  flex: 1;
+  display: none; /* Ocultar inicialmente a div da imagem */
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem {
+  max-width: 100%; /* Ajustar tamanho máximo da imagem */
+  max-height: 400px; /* Altura máxima da imagem */
+}
+
 p {
   color: #2c3e50; 
   line-height: 1.6; 
@@ -108,4 +157,91 @@ p {
   .button-30 {
       width: 100%; 
   }
+}
+
+/* 100% CHATGPT */
+/* Estilizando o bloco de código */
+pre {
+  position: relative;
+  background-color: #2d2d2d;
+  color: #d4d4d4;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.token.keyword {
+  color: #569cd6; /* Cor azul para palavras-chave como 'let' */
+}
+
+/* Estilizando o código realçado pelo Prism.js */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #75715e; /* Comentários e similares */
+}
+
+.token.punctuation {
+  color: #89a6ba; /* Pontuação */
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+  color: #4ec9b0; /* Propriedades, tags, números, etc. */
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #c586c0; /* Seletores, nomes de atributos, strings, etc. */
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #d4d4d4; /* Operadores, entidades, URLs */
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #569cd6; /* Regras, valores de atributos, palavras-chave */
+}
+
+.token.function,
+.token.class-name {
+  color: #dcdcaa; /* Funções e nomes de classe */
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #ce9178; /* Regex, importantes, variáveis */
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold; /* Importantes em negrito */
+}
+
+.token.italic {
+  font-style: italic; /* Itálicos */
+}
+
+.token.entity {
+  cursor: help; /* Cursor para entidades */
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista De Questões</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">
 </head>
 <body>
         <div class="container">
@@ -22,8 +22,10 @@
                     <label for="numeroDecimal1">Número Decimal:</label>
                     <input type="text" id="numeroDecimal1" placeholder="Digite um número decimal">
                 </div>
-                <button class="button-30" role="button" onclick="q1()">Executar Código</button>
+                <button class="button-30" role="button" onclick="q1()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo1', q1Codigo)">Exibir o código</button>
                 <div id="output1" class="result"></div>
+                <pre id="codigo1" class="codigo"><code class="language-javascript"></code></pre>
             </div>
             <!-- Questão 2 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv2')">Mostrar Questão 2</button>
@@ -37,8 +39,10 @@
                     <label for="idade2">Idade:</label>
                     <input type="text" id="idade2" placeholder="Digite sua idade">
                 </div>
-                <button class="button-30" role="button" onclick="q2()">Executar Código</button>
+                <button class="button-30" role="button" onclick="q2()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo2', q2Codigo)">Exibir o código</button>
                 <div id="output2" class="result"></div>
+                <pre id="codigo2" class="codigo"><code class="language-javascript"></code></pre>
             </div>
     
             <!-- Questão 3 -->
@@ -49,8 +53,10 @@
                     <label for="numero3">Número:</label>
                     <input type="text" id="numero3" placeholder="Digite um número">
                 </div>
-                <button class="button-30" role="button" onclick="q3()">Executar Código</button>
+                <button class="button-30" role="button" onclick="q3()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo3', q3Codigo)">Exibir o código</button>
                 <div id="output3" class="result"></div>
+                <pre id="codigo3" class="codigo"><code class="language-javascript"></code></pre>
         </div>
     
         <!-- Questão 4 -->
@@ -61,8 +67,10 @@
                 <label for="altura4">Digite sua altura em metros:</label>
                 <input type="text" id="altura4" placeholder="Ex: 1.75">
             </div>
-            <button class="button-30" role="button" onclick="q4()">Executar Código</button>
+            <button class="button-30" role="button" onclick="q4()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo4', q4Codigo)">Exibir o código</button>
             <div id="output4" class="result"></div>
+            <pre id="codigo4" class="codigo"><code class="language-javascript"></code></pre>
     
         </div>
     
@@ -74,8 +82,10 @@
                 <label for="idade5">Digite a sua idade:</label>
                 <input type="text" id="idade5" placeholder="Ex: 50">
             </div>
-            <button class="button-30" role="button" onclick="q5()">Executar Código</button>
+            <button class="button-30" role="button" onclick="q5()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo5', q5Codigo)">Exibir o código</button>
             <div id="output5" class="result"></div>
+            <pre id="codigo5" class="codigo"><code class="language-javascript"></code></pre>
         </div>
     
         <!-- Questão 6 -->
@@ -86,8 +96,10 @@
                 <label for="numero6">Digite um número:</label>
                 <input type="text" id="numero6" placeholder="Digite um número inteiro">
             </div>
-            <button class="button-30" role="button" onclick="q6()">Executar Código</button>
+            <button class="button-30" role="button" onclick="q6()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo6', q6Codigo)">Exibir o código</button>
             <div id="output6" class="result"></div>
+            <pre id="codigo6" class="codigo"><code class="language-javascript"></code></pre>
         </div>
     
         <!-- Questão 7 -->
@@ -106,8 +118,10 @@
                 <label for="numeroQ7-3">Digite o terceiro número:</label>
                 <input type="text" id="numeroQ7-3" placeholder="Digite o terceiro número">
             </div>
-            <button onclick="q7()">Executar Código</button>
+            <button class="button-30" onclick="q7()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo7', q7Codigo)">Exibir o código</button>
             <div id="output7" class="result"></div>
+            <pre id="codigo7" class="codigo"><code class="language-javascript"></code></pre>
         </div>
     
         <!-- Questão 8 -->
@@ -126,8 +140,10 @@
                 <label for="notaQ8-3">Digite a terceira nota:</label>
                 <input type="text" id="notaQ8-3" placeholder="Digite a terceira nota">
             </div>
-            <button class="button-30" role="button" onclick="q8()">Executar Código</button>
+            <button class="button-30" role="button" onclick="q8()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo8', q8Codigo)">Exibir o código</button>
             <div id="output8" class="result"></div>
+            <pre id="codigo8" class="codigo"><code class="language-javascript"></code></pre>
         </div>
     
         <!-- Questão 9 -->
@@ -138,8 +154,10 @@
                 <label for="anoNascimento9">Digite o ano de nascimento:</label>
                 <input type="text" id="anoNascimento9" placeholder="EX: 2003">
             </div>
-            <button class="button-30" role="button" onclick="q9()">Executar Código</button>
+            <button class="button-30" role="button" onclick="q9()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo9', q9Codigo)">Exibir o código</button>
             <div id="output9" class="result"></div>
+            <pre id="codigo9" class="codigo"><code class="language-javascript"></code></pre>
         </div>
     
         <!-- Questão 10 -->
@@ -156,8 +174,10 @@
                     <option value="celsius">Celsius para Fahrenheit</option>
                     <option value="fahrenheit">Fahrenheit para Celsius</option>
                 </select>
-            <button class="button-30" role="button" onclick="q10()">Executar Código</button>
+            <button class="button-30" role="button" onclick="q10()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo10', q10Codigo)">Exibir o código</button>
             <div id="output10" class="result"></div>
+            <pre id="codigo10" class="codigo"><code class="language-javascript"></code></pre>
         </div>
         </div>
         <!-- Questão 11 -->
@@ -172,132 +192,256 @@
                 <label for="numeroQ11-2">Digite o segundo número:</label>
                 <input type="text" id="numeroQ11-2" placeholder="Digite o segundo número">
             </div>
-            <button class="button-30" role="button" onclick="q11()">Executar Código</button>
+            <button class="button-30" role="button" onclick="q11()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo11', q11Codigo)">Exibir o código</button>
             <div id="output11" class="result"></div>
+            <pre id="codigo11" class="codigo"><code class="language-javascript"></code></pre>
         </div>
     
         <!-- Questão 12 -->
         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 12</button>
-        
+        <div id="questionDiv12" class="question">
+            <p>12. Escreva um programa que peça ao usuário o valor de três lados de um triângulo e classifique-o como triângulo equilátero, isósceles, escaleno ou inválido.</p>
+            <div class="input-group">
+                <label for="lado1">Digite o valor do primeiro lado:</label>
+                <input type="text" id="lado1" placeholder="Digite o valor do primeiro lado">
+            </div>
+            <div class="input-group">
+                <label for="lado2">Digite o valor do segundo lado:</label>
+                <input type="text" id="lado2" placeholder="Digite o valor do segundo lado">
+            </div>
+            <div class="input-group">
+                <label for="lado3">Digite o valor do terceiro lado:</label>
+                <input type="text" id="lado3" placeholder="Digite o valor do terceiro lado">
+            </div>
+            <button class="button-30" role="button" onclick="q12()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo12', q12Codigo)">Exibir o código</button>
+            <div id="output12" class="result"></div>
+            <pre id="codigo12" class="codigo"><code class="language-javascript"></code></pre>
+        </div>
          <!-- Questão 13 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 13</button>
-
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv13')">Mostrar Questão 13</button>
+         <div id="questionDiv13" class="question">
+            <p>13. Crie um programa que simula um restaurante. O usuário escolhe um prato do menu (opções: pizza, hambúrguer, salada, macarrão) usando a instrução switch. Para cada prato escolhido, exiba o preço e a descrição do prato.</p>
+            <div class="input-group">
+                <label for="prato13">Escolha um prato:</label>
+                <select id="prato13">
+                    <option value="pizza">Pizza</option>
+                    <option value="hamburguer">Hambúrguer</option>
+                    <option value="salada">Salada</option>
+                    <option value="macarrao">Macarrão</option>
+                </select>
+            </div>
+            <button class="button-30" role="button" onclick="q13()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo13', q13Codigo)">Exibir o código</button>
+            <div id="output13" class="result"></div>
+            <pre id="codigo13" class="codigo"><code class="language-javascript"></code></pre>
+        </div>
           <!-- Questão 14 -->
-        <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 14</button>
-
+        <button class="button-30" role="button" onclick="showQuestion('questionDiv14')">Mostrar Questão 14</button>
+        <div id="questionDiv14" class="question">
+            <p>14. Escreva um programa que peça ao usuário sua altura e peso, calcule o IMC (Índice de Massa Corporal) e classifique de acordo com a tabela da OMS (abaixo do peso, peso normal, sobrepeso, obesidade). Exiba o valor do IMC e a classificação usando a instrução switch.</p>
+            <div class="input-group">
+                <label for="altura14">Digite sua altura (em metros):</label>
+                <input type="text" id="altura14" placeholder="Digite sua altura">
+            </div>
+            <div class="input-group">
+                <label for="peso14">Digite seu peso (em kg):</label>
+                <input type="text" id="peso14" placeholder="Digite seu peso">
+            </div>
+            <button class="button-30" role="button" onclick="q14()">Exibir o resultado</button>
+            <button class="button-30" onclick="showCode('codigo14', q14Codigo)">Exibir o código</button>
+            <div id="output14" class="result"></div>
+            <pre id="codigo14" class="codigo"><code class="language-javascript"></code></pre>
+        </div>
          <!-- Questão 15 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 15</button>
-
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv15')">Mostrar Questão 15</button>
+            <div id="questionDiv15" class="question">
+                <p>15. Escreva um programa que solicite ao usuário um número positivo e exiba todos os números pares de 0 até o número informado (use o laço de repetição while).</p>
+                <div class="input-group">
+                    <label for="numero15">Digite um número positivo:</label>
+                    <input type="text" id="numero15" placeholder="Digite um número positivo">
+                </div>
+                <button class="button-30" role="button" onclick="q15()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo15', q15Codigo)">Exibir o código</button>
+                <div id="output15" class="result"></div>
+                <pre id="codigo15" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
          <!-- Questão 16 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 16</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv16')">Mostrar Questão 16</button>
+            <div id="questionDiv16" class="question">
+                <p>16. Escreva um programa que solicite ao usuário um número positivo e exiba todos os números ímpares de 0 até o número informado (use o laço de repetição for).</p>
+                <div class="input-group">
+                    <label for="numero16">Digite um número positivo:</label>
+                    <input type="text" id="numero16" placeholder="Digite um número positivo">
+                </div>
+                <button class="button-30" role="button" onclick="q16()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo16', q16Codigo)">Exibir o código</button>
+                <div id="output16" class="result"></div>
+                <pre id="codigo16" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 17 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 17</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv17')">Mostrar Questão 17</button>
+            <div id="questionDiv17" class="question">
+                <p>17. Crie um programa que calcule o fatorial de um número fornecido pelo usuário.</p>
+                <div class="input-group">
+                    <label for="numero17">Digite um número:</label>
+                    <input type="text" id="numero17" placeholder="Digite um número">
+                </div>
+                <button class="button-30" role="button" onclick="q17()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo17', q17Codigo)">Exibir o código</button>
+                <div id="output17" class="result"></div>
+                <pre id="codigo17" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
          
          <!-- Questão 18 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 18</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv18')">Mostrar Questão 18</button>
+            <div id="questionDiv18" class="question">
+                <p>18. Implemente um jogo de adivinhação onde o computador gera um número aleatório entre 1 e 100 e o usuário tem que adivinhar qual é em até 10 tentativas. Verifique se cada palpite do usuário está correto, menor ou maior que o número secreto. Exiba mensagens informando o resultado de cada tentativa e forneça pistas (menor/maior) para ajudar o usuário. Para gerar um número aleatório entre 0 e 100 em JavaScript podemos usar Math.floor(Math.random() * 101), onde Math.random() retorna um valor entre 0 (inclusive) e 1 (exclusivo), que é multiplicado por 101 para incluir o 100, e Math.floor() arredonda o resultado para o número inteiro mais próximo.</p>
+                <div class="input-group">
+                    <label for="palpite18">Digite seu palpite (1 a 100):</label>
+                    <input type="text" id="palpite18" placeholder="Digite um número">
+                </div>
+                <button class="button-30" role="button" onclick="q18()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo18', q18Codigo)">Exibir o código</button>
+                <div id="output18" class="result"></div>
+                <pre id="codigo18" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 19 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 19</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv19')">Mostrar Questão 19</button>
+            <div id="questionDiv19" class="question">
+                <p>19. Crie uma página HTML com um cabeçalho h1, um botão. Ao clicar no botão,  altere o texto do cabeçalho para “A mágica em JS continua!”.</p>
+                <div class="input-group">
+                    <h1  id="numero19">Clique no botão para ver a mágica!</h1>
+                </div>
+                <button class="button-30" role="button" onclick="q19()">Exibir o resultado</button>
+                <button class="button-30" onclick="showCode('codigo19', q19Codigo)">Exibir o código</button>
+                <div id="output19" class="result"></div>
+                <pre id="codigo19" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 20 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 20</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv20')">Mostrar Questão 20</button>
+            <div id="questionDiv20" class="question">
+                <p>20. Crie uma página HTML com um parágrafo. Ao clicar no parágrafo, altere a  cor do texto para verde..</p>
+                <div class="input-group">
+                    <p id="numero20" onclick="q20()">Clique neste parágrafo para mudar a cor do texto para verde.</p>
+                </div>
+                <button class="button-30" onclick="showCode('codigo20', q20Codigo)">Exibir o código</button>
+                <div id="output20" class="result"></div>
+                <pre id="codigo20" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
         
          <!-- Questão 21 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 21</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv21')">Mostrar Questão 21</button>
+            <div id="questionDiv21" class="question">
+                <p id="numero21">21. Crie uma página com um parágrafo e dois botões: um “Ocultar” e um  “Mostrar”. Ao clicar no botão Ocultar, modifique a propriedade  style.display do parágrafo para none. Ao clicar no botão “Mostrar”, altere a  propriedade style.display do parágrafo para block.</p>
+                <div class="input-group">
+                    <button id="numero21" class="button-30" onclick="hiddenQ21()"`>Ocultar</button>
+                    <button id="numero21" class="button-30" onclick="showQ21()">Mostrar</button>
+                </div>
+                <button class="button-30" onclick="showCode('codigo21', q21Codigo)">Exibir o código</button>
+                <div id="output21" class="result"></div>
+                <pre id="codigo21" class="codigo"><code class="language-javascript"></code></pre>
+            </div>
 
          <!-- Questão 22 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 22</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv22')">Mostrar Questão 22</button>
 
          <!-- Questão 23 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 23</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv23')">Mostrar Questão 23</button>
 
          <!-- Questão 24 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 24</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv24')">Mostrar Questão 24</button>
 
          <!-- Questão 25 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 25</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv25')">Mostrar Questão 25</button>
 
          <!-- Questão 26 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 26</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv26')">Mostrar Questão 26</button>
 
          <!-- Questão 27 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 27</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv27')">Mostrar Questão 27</button>
 
          <!-- Questão 28 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 28</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv28')">Mostrar Questão 28</button>
 
          <!-- Questão 29 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 29</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv29')">Mostrar Questão 29</button>
 
          <!-- Questão 30 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 30</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv30')">Mostrar Questão 30</button>
 
           <!-- Questão 31 -->
-          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 31</button>
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv31')">Mostrar Questão 31</button>
 
            <!-- Questão 32 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 32</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv33')">Mostrar Questão 32</button>
 
           <!-- Questão 33 -->
-          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 33</button>
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv33')">Mostrar Questão 33</button>
 
            <!-- Questão 34 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 34</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv34')">Mostrar Questão 34</button>
 
           <!-- Questão 35 -->
-          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 35</button>
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv35')">Mostrar Questão 35</button>
 
            <!-- Questão 36 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 36</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv36')">Mostrar Questão 36</button>
 
           <!-- Questão 37 -->
-          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 37</button>
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv37')">Mostrar Questão 37</button>
 
            <!-- Questão 38 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 38</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv38')">Mostrar Questão 38</button>
 
           <!-- Questão 39 -->
-          <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 39</button>
+          <button class="button-30" role="button" onclick="showQuestion('questionDiv39')">Mostrar Questão 39</button>
 
            <!-- Questão 40 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 40</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv40')">Mostrar Questão 40</button>
 
          <!-- Questão 41 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 41</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv41')">Mostrar Questão 41</button>
 
          <!-- Questão 42 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 42</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv42')">Mostrar Questão 42</button>
 
          <!-- Questão 43 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 43</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv43')">Mostrar Questão 43</button>
 
          <!-- Questão 44 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 44</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv44')">Mostrar Questão 44</button>
 
          <!-- Questão 45 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 45</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv45')">Mostrar Questão 45</button>
 
          <!-- Questão 46 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 46</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv46')">Mostrar Questão 46</button>
 
          <!-- Questão 47 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 47</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv47')">Mostrar Questão 47</button>
 
          <!-- Questão 48 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 48</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv48')">Mostrar Questão 48</button>
 
          <!-- Questão 49 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 49</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv49')">Mostrar Questão 49</button>
 
          <!-- Questão 50 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 50</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv50')">Mostrar Questão 50</button>
 
          <!-- Questão 51 -->
-         <button class="button-30" role="button" onclick="showQuestion('questionDiv12')">Mostrar Questão 51</button>
+         <button class="button-30" role="button" onclick="showQuestion('questionDiv51')">Mostrar Questão 51</button>
 
          
         
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
