@@ -1693,40 +1693,565 @@ function q33Codigo() {
 
 }
 
+function lerValorReal() {
+    return parseFloat(document.getElementById('numeroQ34').value);
+}
+
+function converterParaDolar(valorReal) {
+
+    const taxaCambio = 5.36;
+    return valorReal / taxaCambio;
+}
+
+function exibirResultado(valorDolar) {
+    const resultadoElement = document.getElementById('output34').innerHTML = `O valor em dólar é: $${valorDolar.toFixed(2)}`;
+}
+
 function q34() {
 
+    const valorReal = lerValorReal();
+
+    if (isNaN(valorReal) || valorReal <= 0) {
+        document.getElementById('output34').innerHTML = 'Por favor, insira um valor válido.';
+        return;
+    }
+
+    const valorDolar = converterParaDolar(valorReal);
+    exibirResultado(valorDolar);
+}
+
+function q34Codigo() {
+    
+        let codigo = `
+        function lerValorReal() {
+            return parseFloat(document.getElementById('numeroQ34').value);
+        }
+        
+        function converterParaDolar(valorReal) {
+        
+            const taxaCambio = 5.36;
+            return valorReal / taxaCambio;
+        }
+        
+        function exibirResultado(valorDolar) {
+            const resultadoElement = document.getElementById('output34').innerHTML = 'O valor em dólar é: $' + valorDolar.toFixed(2);
+        }
+        
+        function q34() {
+        
+            const valorReal = lerValorReal();
+        
+            if (isNaN(valorReal) || valorReal <= 0) {
+                document.getElementById('output34').innerHTML = 'Por favor, insira um valor válido.';
+                return;
+            }
+        
+            const valorDolar = converterParaDolar(valorReal);
+            exibirResultado(valorDolar);
+        }`;
+    
+        let codigoElement = document.getElementById('codigo34');
+        codigoElement.innerHTML = '';
+        codigoElement.textContent = codigo;
+    
+        Prism.highlightElement(codigoElement);
+    
+    
+}
+
+function lerAltura() {
+    return parseFloat(document.getElementById('numeroQ35-1').value);
+}
+
+function lerPeso() {
+    return parseFloat(document.getElementById('numeroQ35-2').value);
+}
+
+function calcularIMC() {
+
+    const altura = lerAltura();
+    const peso = lerPeso();
+
+    if (isNaN(altura) || isNaN(peso) || altura <= 0 || peso <= 0) {
+        document.getElementById('output35').innerHTML = 'Por favor, insira valores válidos.';
+        return;
+    }
+
+    const imc = peso / (altura * altura);
+    exibirResultadoIMC(imc);
+}
+
+function exibirResultadoIMC(imc) {
+    let classificacao = '';
+
+    if (imc < 18.5) {
+        classificacao = 'Abaixo do Peso';
+    } else if (imc >= 18.5 && imc < 25) {
+        classificacao = 'Peso Normal';
+    } else if (imc >= 25 && imc < 30) {
+        classificacao = 'Sobrepeso';
+    } else if (imc >= 30 && imc < 35) {
+        classificacao = 'Obesidade Grau I';
+    } else if (imc >= 35 && imc < 40) {
+        classificacao = 'Obesidade Grau II';
+    } else {
+        classificacao = 'Obesidade Grau III';
+    }
+
+    const resultadoElementIMC = document.getElementById('output35');
+    resultadoElementIMC.textContent = `Seu IMC é ${imc.toFixed(2)} e você está ${classificacao}.`
 }
 
 function q35() {
 
+    const altura = lerAltura();
+    const peso = lerPeso();
+
+    if (isNaN(altura) || isNaN(peso) || altura <= 0 || peso <= 0) {
+        document.getElementById('output35').innerHTML = 'Por favor, insira valores válidos.';
+        return;
+    }
+
+    const imc = peso / (altura * altura);
+    exibirResultadoIMC(imc);
+}
+
+function q35Codigo() {
+        
+            let codigo = `
+            function lerAltura() {
+                return parseFloat(document.getElementById('numeroQ35-1').value);
+            }
+            
+            function lerPeso() {
+                return parseFloat(document.getElementById('numeroQ35-2').value);
+            }
+            
+            function calcularIMC() {
+            
+                const altura = lerAltura();
+                const peso = lerPeso();
+            
+                if (isNaN(altura) || isNaN(peso) || altura <= 0 || peso <= 0) {
+                    document.getElementById('output35').innerHTML = 'Por favor, insira valores válidos.';
+                    return;
+                }
+            
+                const imc = peso / (altura * altura);
+                exibirResultadoIMC(imc);
+            }
+            
+            function exibirResultadoIMC(imc) {
+                let classificacao = '';
+            
+                if (imc < 18.5) {
+                    classificacao = 'Abaixo do Peso';
+                } else if (imc >= 18.5 && imc < 25) {
+                    classificacao = 'Peso Normal';
+                } else if (imc >= 25 && imc < 30) {
+                    classificacao = 'Sobrepeso';
+                } else if (imc >= 30 && imc < 35) {
+                    classificacao = 'Obesidade Grau I';
+                } else if (imc >= 35 && imc < 40) {
+                    classificacao = 'Obesidade Grau II';
+                } else {
+                    classificacao = 'Obesidade Grau III';
+                }
+            
+                const resultadoElementIMC = document.getElementById('output35');
+                resultadoElementIMC.textContent = 'Seu IMC é ' + imc.toFixed(2) + ' e você está ' + classificacao + '.';
+            }`;
+        
+            let codigoElement = document.getElementById('codigo35');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+        
+    }  
+
+
+function criarObjetoAluno() {
+    // Obter os dados inseridos pelo usuário
+    const nome = document.getElementById('numeroQ36-1').value;
+    const idade = parseInt(document.getElementById('numeroQ36-2').value);
+    const curso = document.getElementById('numeroQ36-3').value;
+    const notas = document.getElementById('numeroQ36-4').value.split(',').map(Number);
+
+    const aluno = {
+        nome: nome,
+        idade: idade,
+        curso: curso,
+        notas: notas
+    };
+
+    return aluno;
 }
 
 function q36() {
+    
+        const aluno = criarObjetoAluno();
+        const resultadoElement = document.getElementById('output36');
 
+        const dadosAluno = `Nome: ${aluno.nome}, Idade: ${aluno.idade}, Curso: ${aluno.curso}, Notas: ${aluno.notas.join(', ')}`;
+
+        resultadoElement.innerHTML = dadosAluno;
+}
+
+function q36Codigo() {
+        
+            let codigo = `
+            function criarObjetoAluno() {
+                // Obter os dados inseridos pelo usuário
+                const nome = document.getElementById('numeroQ36-1').value;
+                const idade = parseInt(document.getElementById('numeroQ36-2').value);
+                const curso = document.getElementById('numeroQ36-3').value;
+                const notas = document.getElementById('numeroQ36-4').value.split(',').map(Number);
+            
+                const aluno = {
+                    nome: nome,
+                    idade: idade,
+                    curso: curso,
+                    notas: notas
+                };
+            
+                return aluno;
+            }
+            
+            function q36() {
+            
+                const aluno = criarObjetoAluno();
+                const resultadoElement = document.getElementById('output36');
+            
+                const dadosAluno = 'Nome: ' + aluno.nome + ', Idade: ' + aluno.idade + ', Curso: ' + aluno.curso + ', Notas: ' + aluno.notas.join(', ');
+            
+                resultadoElement.innerHTML = dadosAluno;
+            }`;
+        
+            let codigoElement = document.getElementById('codigo36');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+        
+    }
+
+function criarObjetoCarro() {    
+
+    const marca = document.getElementById('numeroQ37-1').value;
+    const modelo = document.getElementById('numeroQ37-2').value;
+    const ano = parseInt(document.getElementById('numeroQ37-3').value);
+
+    const carro = {
+        marca: marca,
+        modelo: modelo,
+        ano: ano
+    };
+
+    return carro;
 }
 
 function q37() {
+    const carro = criarObjetoCarro();
+    const resultadoElement = document.getElementById('output37');
+
+    const resultadoCarro = `A marca do carro é ${carro.marca}.`;
+
+    resultadoElement.textContent = resultadoCarro;
+}
+
+function q37Codigo() {
+        
+            let codigo = `
+            function criarObjetoCarro() {    
+        
+                const marca = document.getElementById('numeroQ37-1').value;
+                const modelo = document.getElementById('numeroQ37-2').value;
+                const ano = parseInt(document.getElementById('numeroQ37-3').value);
+            
+                const carro = {
+                    marca: marca,
+                    modelo: modelo,
+                    ano: ano
+                };
+            
+                return carro;
+            }
+            
+            function q37() {
+                const carro = criarObjetoCarro();
+                const resultado = document.getElementById('output37');
+            
+                resultadoElement.textContent = 'A marca do carro é ' + carro.marca + '.';
+            }`;
+        
+            let codigoElement = document.getElementById('codigo37');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+        
+    }
+
+function criarObjetoLivro() {
+    const titulo = document.getElementById('numeroQ38-1').value;
+    const autor = document.getElementById('numeroQ38-2').value;
+    const anoPublicacao = parseInt(document.getElementById('numeroQ38-3').value);
+
+    // Verificar se os campos foram preenchidos
+    if (!titulo || !autor || !anoPublicacao) {
+        return null;
+    }
+
+    const livro = {
+        titulo: titulo,
+        autor: autor,
+        ano: anoPublicacao
+    };
+
+    return livro;
 
 }
 
 function q38() {
+    const livro = criarObjetoLivro();
+    const resultadoElement = document.getElementById('output38');
 
+    if (livro === null) {
+        resultadoElement.textContent = 'Por favor, preencha todos os campos.';
+        return;
+    }
+
+    const resultadoLivro = `O livro ${livro.titulo} foi escrito por ${livro.autor} e publicado em ${livro.ano}.`;
+
+    resultadoElement.textContent = resultadoLivro;
+}
+
+function q38Codigo() {
+        
+            let codigo = `
+            function criarObjetoLivro() {
+                const titulo = document.getElementById('numeroQ38-1').value;
+                const autor = document.getElementById('numeroQ38-2').value;
+                const anoPublicacao = parseInt(document.getElementById('numeroQ38-3').value);
+            
+                // Verificar se os campos foram preenchidos
+                if (!titulo || !autor || !anoPublicacao) {
+                    return null;
+                }
+            
+                const livro = {
+                    titulo: titulo,
+                    autor: autor,
+                    ano: anoPublicacao
+                };
+            
+                return livro;
+            
+            }
+            
+            function q38() {
+                const livro = criarObjetoLivro();
+                const resultadoElement = document.getElementById('output38');
+            
+                if (livro === null) {
+                    resultadoElement.textContent = 'Por favor, preencha todos os campos.';
+                    return;
+                }
+            
+                const resultadoLivro = 'O livro ' + livro.titulo + ' foi escrito por ' + livro.autor + ' e publicado em ' + livro.ano + '.';
+            
+                resultadoElement.textContent = resultadoLivro;
+            }`;
+    
+            let codigoElement = document.getElementById('codigo38');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+    
+            Prism.highlightElement(codigoElement);
+    
+    }
+
+function criarObjetoProduto() {
+    const nome = document.getElementById('numeroQ39-1').value;
+    const preco = parseFloat(document.getElementById('numeroQ39-2').value);
+    const quantidade = parseInt(document.getElementById('numeroQ39-3').value);
+
+    if (!nome || isNaN(preco) || isNaN(quantidade)) {
+        return null;
+    }
+
+    const produto = {
+        nome: nome,
+        preco: preco,
+        quantidade: quantidade
+    };
+
+    return produto;
 }
 
 function q39() {
+    const produto = criarObjetoProduto();
+    const resultadoElement = document.getElementById('output39');
 
+    if (produto === null) {
+        resultadoElement.textContent = 'Por favor, preencha todos os campos.';
+        return;
+    }
+
+    const resultadoProduto = `O produto ${produto.nome} custa R$${produto.preco.toFixed(2)} e tem ${produto.quantidade} unidades em estoque.`;
+
+    resultadoElement.textContent = resultadoProduto;
 }
 
-function q40() {
+function q39Codigo() {
+            
+                let codigo = `
+                function criarObjetoProduto() {
+                    const nome = document.getElementById('numeroQ39-1').value;
+                    const preco = parseFloat(document.getElementById('numeroQ39-2').value);
+                    const quantidade = parseInt(document.getElementById('numeroQ39-3').value);
+                
+                    if (!nome || isNaN(preco) || isNaN(quantidade)) {
+                        return null;
+                    }
+                
+                    const produto = {
+                        nome: nome,
+                        preco: preco,
+                        quantidade: quantidade
+                    };
+                
+                    return produto;
+                }
+                
+                function q39() {
+                    const produto = criarObjetoProduto();
+                    const resultadoElement = document.getElementById('output39');
+                
+                    if (produto === null) {
+                        resultadoElement.textContent = 'Por favor, preencha todos os campos.';
+                        return;
+                    }
+                
+                    const resultadoProduto = 'O produto ' + produto.nome + ' custa R$' + produto.preco.toFixed(2) + ' e tem ' + produto.quantidade + ' unidades em estoque.';
+                
+                    resultadoElement.textContent = resultadoProduto;
+                }`;
+        
+                let codigoElement = document.getElementById('codigo39');
+                codigoElement.innerHTML = '';
+                codigoElement.textContent = codigo;
+        
+                Prism.highlightElement(codigoElement);
+        
+        }
 
+function q40() {
+    const nome = document.getElementById('numeroQ40').value;
+    const numeroCaracteres = nome.length;
+    const resultadoElement = document.getElementById('output40');
+
+    resultadoElement.textContent = `O nome ${nome} tem ${numeroCaracteres} caracteres.`;
+}
+
+function q40Codigo() {
+
+    let codigo = `
+    function q40() {
+        const nome = document.getElementById('numeroQ40').value;
+        const numeroCaracteres = nome.length;
+        const resultadoElement = document.getElementById('output40');
+
+        resultadoElement.textContent = 'O nome ' + nome + ' tem ' + numeroCaracteres + ' caracteres.';
+    }`;
+
+    let codigoElement = document.getElementById('codigo40');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
+            
 }
 
 function q41() {
+    const nomeCompleto = document.getElementById('numeroQ41').value.trim();
+    const nomeArray = nomeCompleto.split(' ');
 
+    if (nomeArray.length < 2) {
+        document.getElementById('output41').textContent = 'Por favor, insira um nome completo.';
+        return;
+    }
+
+    const primeiroNome = nomeArray[0];
+    const ultimoNome = nomeArray[nomeArray.length - 1];
+
+    const resultadoElement = document.getElementById('output41');
+    resultadoElement.textContent = `Primeiro nome: ${primeiroNome}, Último nome: ${ultimoNome}`;
 }
 
-function q42() {
+function q41Codigo() {
+    
+        let codigo = `
+        function q41() {
+            const nomeCompleto = document.getElementById('numeroQ41').value.trim();
+            const nomeArray = nomeCompleto.split(' ');
+    
+            if (nomeArray.length < 2) {
+                document.getElementById('output41').textContent = 'Por favor, insira um nome completo.';
+                return;
+            }
+    
+            const primeiroNome = nomeArray[0];
+            const ultimoNome = nomeArray[nomeArray.length - 1];
+    
+            const resultadoElement = document.getElementById('output41');
+            resultadoElement.textContent = 'Primeiro nome: ' + primeiroNome + ', Último nome: ' + ultimoNome;
+        }`;
+    
+        let codigoElement = document.getElementById('codigo41');
+        codigoElement.innerHTML = '';
+        codigoElement.textContent = codigo;
+    
+        Prism.highlightElement(codigoElement);
+                
+    }
 
+function q42() {
+    const nomeCompleto = document.getElementById('numeroQ42').value.trim();
+    const nomeArray = nomeCompleto.split(' ');
+
+    if(!nomeCompleto) {
+        document.getElementById('output42').textContent = 'Por favor, insira um nome.';
+        return;
+    }
+
+    const resultadoElement = document.getElementById('output42');
+    resultadoElement.textContent = `O primeiro nome: ${nomeArray}`;
+}
+
+function q42Codigo() {
+        
+            let codigo = `
+            function q42() {
+                const nomeCompleto = document.getElementById('numeroQ42').value.trim();
+                const nomeArray = nomeCompleto.split(' ');
+        
+                if(!nomeCompleto) {
+                    document.getElementById('output42').textContent = 'Por favor, insira um nome.';
+                    return;
+                }
+        
+                const resultadoElement = document.getElementById('output42');
+                resultadoElement.textContent = 'O primeiro nome: ' + nomeArray;
+            }`;
+        
+            let codigoElement = document.getElementById('codigo42');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+                    
 }
 
 function q43() {
@@ -1761,7 +2286,7 @@ function q50() {
 
 }
 
-function q510() {
+function q51() {
 
 }
 

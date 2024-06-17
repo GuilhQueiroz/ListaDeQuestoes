@@ -517,30 +517,178 @@
 
             <!-- Questão 34 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv34')">Mostrar Questão 34</button>
+                <div id="questionDiv34" class="question">
+                    <p>34. Desenvolva um conversor de moeda que solicita ao usuário o valor em Real e converta-o para Dólar. Use funções para ler os dados de entrada, realizar a conversão e exibir o resultado.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Conversor de Moeda</h1>
+                        <label for="numeroQ34">Valor em Real (BRL):</label>
+                        <input type="number" id="numeroQ34" placeholder="Digite valor em Real">
+                    </div>
+                    <button class="button-30" role="button" onclick="q34()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo34', q34Codigo)">Exibir o código</button>
+                    <div id="output34" class="result"></div>
+                    <pre id="codigo34" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 35 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv35')">Mostrar Questão 35</button>
+                <div id="questionDiv35" class="question">
+                    <p>35. Usando funções, escreva um programa que solicita ao usuário sua altura e peso e calcula o IMC. Em seguida, exibe o resultado e uma mensagem indicando se a pessoa está abaixo do peso, dentro do peso normal, com sobrepeso ou obesa</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Calculadora de IMC</h1>
+                        <label for="numeroQ35-1">Altura (em metros):</label>
+                        <input type="number" id="numeroQ35-1" placeholder="Digite sua altura" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ35-2">Peso (em kg):</label>
+                        <input type="number" id="numeroQ35-2" placeholder="Digite seu peso" step="0.01">
+                    </div>
+                    <button class="button-30" role="button" onclick="q35()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo35', q35Codigo)">Exibir o código</button>
+                    <div id="output35" class="result"></div>
+                    <pre id="codigo35" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 36 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv36')">Mostrar Questão 36</button>
+                <div id="questionDiv36" class="question">
+                    <p>36. Crie um Objeto para representar um aluno, incluindo propriedades como nome, idade, curso e notas. Popule o Objeto com valores e imprima os dados do aluno.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Informações do Aluno</h1>
+                        <label for="numeroQ36-1">Nome:</label>
+                        <input type="number" id="numeroQ36-1" placeholder="Digite o nome do aluno">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ36-2">Idade:</label>
+                        <input type="number" id="numeroQ36-2" placeholder="Digite a idade do aluno">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ36-3">Curso:</label>
+                        <input type="number" id="numeroQ36-3" placeholder="Digite o curso do aluno">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ36-4">Notas:</label>
+                        <input type="number" id="numeroQ36-4" placeholder="Digite as notas do aluno">
+                    </div>
+                    <button class="button-30" role="button" onclick="q36()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo36', q36Codigo)">Exibir o código</button>
+                    <div id="output36" class="result"></div>
+                    <pre id="codigo36" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 37 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv37')">Mostrar Questão 37</button>
+                <div id="questionDiv37" class="question">
+                    <p>37. Crie um Objeto para representar um carro, incluindo propriedades como marca, modelo, ano, cor e preço. Popule o Objeto com valores e imprima os dados do carro.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Informações do Carro</h1>
+                        <label for="numeroQ37-1">Marca:</label>
+                        <input type="text" id="numeroQ37-1" placeholder="Digite a marca do carro">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ37-2">Modelo:</label>
+                        <input type="text " id="numeroQ37-2" placeholder="Digite o modelo do carro">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ37-3">Ano:</label>
+                        <input type="text" id="numeroQ37-3" placeholder="Digite o ano do carro">
+                    </div>
+                    <button class="button-30" role="button" onclick="q37()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo37', q37Codigo)">Exibir o código</button>
+                    <p id="output37" class="result"></p>
+                    <pre id="codigo37" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 38 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv38')">Mostrar Questão 38</button>
+                <div id="questionDiv38" class="question">
+                    <p>38. Crie um Objeto para representar um livro, incluindo propriedades como título, autor e ano de publicação. Imprima o título e o autor do livro.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Informações do Livro</h1>
+                        <label for="numeroQ38-1">Título:</label>
+                        <input type="text" id="numeroQ38-1" placeholder="Digite o título do livro">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ38-2">Autor:</label>
+                        <input type="text" id="numeroQ38-2" placeholder="Digite o autor do livro">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ38-3">Ano de publicação:</label>
+                        <input type="text" id="numeroQ38-3" placeholder="Digite o ano de publicação do livro">
+                    </div>
+                    <button class="button-30" role="button" onclick="q38()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo38', q38Codigo)">Exibir o código</button>
+                    <div id="output38" class="result"></div>
+                    <pre id="codigo38" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 39 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv39')">Mostrar Questão 39</button>
+                <div id="questionDiv39" class="question">
+                    <p>39. Crie um Objeto produto com as propriedades nome, preco e quantidade. Em seguida, calcule e imprima o valor total do estoque</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Informações do Produto</h1>
+                        <label for="numeroQ39-1">Nome do Produto:</label>
+                        <input type="text" id="numeroQ39-1" placeholder="Digite o nome do produto">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ39-2">Preço do Produto:</label>
+                        <input type="text" id="numeroQ39-2" placeholder="Digite o preço do produto">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ39-3">Quantidade em Estoque:</label>
+                        <input type="text" id="numeroQ39-3" placeholder="Digite a quantidade em estoque">
+                    </div>
+                    <button class="button-30" role="button" onclick="q39()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo39', q39Codigo)">Exibir o código</button>
+                    <div id="output39" class="result"></div>
+                    <pre id="codigo39" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 40 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv40')">Mostrar Questão 40</button>
+                <div id="questionDiv40" class="question">
+                    <p>40. Crie uma String com o seu nome e imprima o número de caracteres.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Contar Caracteres do Nome</h1>
+                        <label for="numeroQ40">Nome:</label>
+                        <input type="text" id="numeroQ40" placeholder="Digite o seu nome">
+                    </div>
+                    <button class="button-30" role="button" onclick="q40()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo40', q40Codigo)">Exibir o código</button>
+                    <div id="output40" class="result"></div>
+                    <pre id="codigo40" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 41 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv41')">Mostrar Questão 41</button>
+                <div id="questionDiv41" class="question">
+                    <p>41. Crie uma função que recebe um nome completo do usuário e imprime o primeiro e último nome.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Nome Completo</h1>
+                        <label for="numeroQ41">Nome:</label>
+                        <input type="text" id="numeroQ41" placeholder="Digite o seu nome completo">
+                    </div>
+                    <button class="button-30" role="button" onclick="q41()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo41', q41Codigo)">Exibir o código</button>
+                    <div id="output41" class="result"></div>
+                    <pre id="codigo41" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 42 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv42')">Mostrar Questão 42</button>
+                <div id="questionDiv42" class="question">
+                    <p>42. Crie uma função que recebe um nome completo do usuário e imprime somente o primeiro.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Primeiro Nome</h1>
+                        <label for="numeroQ42">Nome Completo:</label>
+                        <input type="text" id="numeroQ42" placeholder="Digite o seu nome completo">
+                    </div>
+                    <button class="button-30" role="button" onclick="q42()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo42', q42Codigo)">Exibir o código</button>
+                    <div id="output42" class="result"></div>
+                    <pre id="codigo42" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 43 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv43')">Mostrar Questão 43</button>
@@ -569,8 +717,6 @@
             <!-- Questão 51 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv51')">Mostrar Questão 51</button>
 
-            
-            
         </div>
     </main>
     <footer>
