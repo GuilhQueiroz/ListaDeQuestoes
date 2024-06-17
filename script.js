@@ -1327,12 +1327,79 @@ function q28Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function q29() {
+let globalVariable = "Eu sou uma variável global"
 
+function q29() {
+    let localVariable = "Eu sou uma variável local";
+
+    document.getElementById('output29').innerHTML = globalVariable + '<br>' + localVariable;
+}
+
+function q29Codigo() {
+    
+        let codigo = `
+        let globalVariable = "Eu sou uma variável global"
+    
+        function q29() {
+            let localVariable = "Eu sou uma variável local";
+    
+            document.getElementById('output29').innerHTML = globalVariable + '<br>' + localVariable;
+        }`;
+    
+        let codigoElement = document.getElementById('codigo29');
+        codigoElement.innerHTML = '';
+        codigoElement.textContent = codigo;
+    
+        Prism.highlightElement(codigoElement);
 }
 
 function q30() {
+    if (true) {
+        let localVariable = "Eu sou uma variável local";
+    }
 
+    try {
+        console.log(localVariable);
+    }
+    catch (error) {
+        document.getElementById('output30').innerHTML = 'Erro: ' + error;
+    }
+
+    if (true) {
+        var globalVariable = "Eu sou uma variável global";
+    }
+
+    document.getElementById('output30').innerHTML = globalVariable;
+}
+
+function q30Codigo() {
+        
+            let codigo = `
+            function q30() {
+                if (true) {
+                    let localVariable = "Eu sou uma variável local";
+                }
+            
+                try {
+                    console.log(localVariable);
+                }
+                catch (error) {
+                    document.getElementById('output30').innerHTML = 'Erro: ' + error;
+                }
+            
+                if (true) {
+                    var globalVariable = "Eu sou uma variável global";
+                }
+            
+                document.getElementById('output30').innerHTML = globalVariable;
+            }`;
+        
+            let codigoElement = document.getElementById('codigo30');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+    
 }
 
 function q31() {
@@ -2470,16 +2537,119 @@ function q49Codigo() {
             codigoElement.textContent = codigo;
         
             Prism.highlightElement(codigoElement);
-        
-    
 }
 
 function q50() {
+    const userName = document.getElementById('nomeQ50').value;
 
+    if (userName) {
+        document.getElementById('output50').textContent = `Olá, ${userName}! Seja bem-vindo!`;
+    } else {
+        document.getElementById('output50').textContent = 'Por favor, insira seu nome.';
+    }
+}
+
+function q50Codigo() {
+            
+                let codigo = `
+                function q50() {
+                    const userName = document.getElementById('nomeQ50').value;
+                
+                    if (userName) {
+                        document.getElementById('output50').textContent = 'Olá, ' + userName + '! Seja bem-vindo!';
+                    } else {
+                        document.getElementById('output50').textContent = 'Por favor, insira seu nome.';
+                    }
+                }`;
+            
+                let codigoElement = document.getElementById('codigo50');
+                codigoElement.innerHTML = '';
+                codigoElement.textContent = codigo;
+            
+                Prism.highlightElement(codigoElement);
 }
 
 function q51() {
+    document.addEventListener('DOMContentLoaded', function() {
+        let users = [];
 
+         window.addNames = function addNames() {
+            const input = document.getElementById('nomeQ51').value;
+            const names = input.split(',').map(name => name.trim());
+
+            users = users.concat(names);
+            displayUsers();
+        }
+
+        function displayUsers() {
+            const userList = document.getElementById('userListQ51');
+            userList.innerHTML = '';
+            users.forEach(user => {
+                const listItem = document.createElement('li');
+                listItem.textContent = user;
+                userList.appendChild(listItem);
+            });
+        }
+
+        window.searchName = function searchName() {
+            const search = document.getElementById('searchQ51').value.trim().toLowerCase();
+            const searchResult = document.getElementById('searchResultQ51');
+
+            const foundUsers = users.filter(user => user.toLowerCase().includes(search));
+            if (foundUsers.length > 0) {
+                searchResult.textContent = `Nomes encontrados: ${foundUsers.join(', ')}`;
+            } else {
+                searchResult.textContent = 'Nenhum nome encontrado.';
+            }
+        }
+    });
+}
+
+q51();
+
+function q51Codigo() {
+        
+            let codigo = `
+            document.addEventListener('DOMContentLoaded', function() {
+                let users = [];
+        
+                window.addNames = function addNames() {
+                    const input = document.getElementById('nomeQ51').value;
+                    const names = input.split(',').map(name => name.trim());
+        
+                    users = users.concat(names);
+                    displayUsers();
+                }
+        
+                function displayUsers() {
+                    const userList = document.getElementById('userListQ51');
+                    userList.innerHTML = '';
+                    users.forEach(user => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = user;
+                        userList.appendChild(listItem);
+                    });
+                }
+        
+                window.searchName = function searchName() {
+                    const search = document.getElementById('searchQ51').value.trim().toLowerCase();
+                    const searchResult = document.getElementById('searchResultQ51');
+        
+                    const foundUsers = users.filter(user => user.toLowerCase().includes(search));
+                    if (foundUsers.length > 0) {
+                        searchResult.textContent = 'Nomes encontrados: ' + foundUsers.join(', ');
+                    } else {
+                        searchResult.textContent = 'Nenhum nome encontrado.';
+                    }
+                }
+            });`;
+    
+            let codigoElement = document.getElementById('codigo51');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+    
+            Prism.highlightElement(codigoElement);
+    
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {

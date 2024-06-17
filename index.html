@@ -456,9 +456,23 @@
 
             <!-- Questão 29 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv29')">Mostrar Questão 29</button>
+                <div id="questionDiv29" class="question">
+                    <p>29. Declare uma variável global e uma local dentro de uma função. Tente acessá-las de diferentes partes do código para entender o escopo.</p>
+                    <button class="button-30" role="button" onclick="q29()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo29', q29Codigo)">Exibir o código</button>
+                    <div id="output29" class="result"></div>
+                    <pre id="codigo29" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 30 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv30')">Mostrar Questão 30</button>
+                <div id="questionDiv30" class="question">
+                    <p>30. Crie uma função que declara uma variável dentro de um bloco de código (por exemplo, um if) e tente acessá-la fora desse bloco para entender o escopo local do bloco.</p>
+                    <button class="button-30" role="button" onclick="q30()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo30', q30Codigo)">Exibir o código</button>
+                    <div id="output30" class="result"></div>
+                    <pre id="codigo30" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 31 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv31')">Mostrar Questão 31</button>
@@ -859,9 +873,43 @@
 
             <!-- Questão 50 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv50')">Mostrar Questão 50</button>
+                <div id="questionDiv50" class="question">
+                    <p>50. Crie um exemplo baseado em funções em arquivos JS.</p>
+                    <h1 style="text-align: center;">Bem-vindo(a)!</h1>
+                    <div class="input-group">
+                        <label for="nomeQ50">Nome:</label>
+                        <input type="text" id="nomeQ50" placeholder="Digite seu nome">
+                    </div>
+                    <button class="button-30" role="button" onclick="q50()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo50', q50Codigo)">Exibir o código</button>
+                    <div id="output50" class="result"></div>
+                    <pre id="codigo50" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 51 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv51')">Mostrar Questão 51</button>
+                <div id="questionDiv51" class="question">
+                    <p>51. Crie um exemplo baseado em funções em arquivos JS.</p>
+                    <h1 style="text-align: center;">Gerenciador de Usuários</h1>
+                    <div class="input-group">
+                        <label for="nomeQ51">Digite os nomes (separados por vírgula):</label>
+                        <input type="text" id="nomeQ51" placeholder="Exemplo: João,Maria,Ana">
+                        <button class="button-30" role="button" onclick="addNames()">Adicionar Usuários</button>
+                    </div>
+                    <div class="input-group">
+                        <label for="searchQ51">Procurar Nome:</label>
+                        <input type="text" id="searchQ51" placeholder="Digite um nome">
+                        <button class="button-30" role="button" onclick="searchName()">Procurar</button>
+                    </div>
+                    <div class="input-group">
+                        <h2>Lista de Usuários:</h2>
+                        <ul id="userListQ51"></ul>
+                        <p id="searchResultQ51"></p>
+                    </div>
+                    <button class="button-30" onclick="showCode('codigo51', q51Codigo)">Exibir o código</button>
+                    <div id="output51" class="result"></div>
+                    <pre id="codigo51" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
         </div>
     </main>

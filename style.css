@@ -321,3 +321,8 @@ main {
   text-align: center;
   margin: 20px;
 }
+
+#userListQ51 {
+  list-style-type: none;
+  padding: 0;
+}
