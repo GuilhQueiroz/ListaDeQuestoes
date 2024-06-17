@@ -1,6 +1,9 @@
-
-
-
+.question {
+  display: none; /* Inicialmente oculto */
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-top: 10px;
+}
 
 .container {
   width: 100%;
@@ -297,4 +300,24 @@ main {
   flex: 1; 
   padding: 20px;
   text-align: center;
+}
+
+/* Estilo da caixa */
+#minhaCaixa {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  margin: 20px auto; 
+  transition: background-color 0.3s ease; 
+}
+
+
+#minhaCaixa:hover {
+  background-color: red;
+}
+
+
+.questionQ47 {
+  text-align: center;
+  margin: 20px;
 }

@@ -224,7 +224,7 @@
             <!-- Questão 13 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv13')">Mostrar Questão 13</button>
             <div id="questionDiv13" class="question">
-                <p>13. Crie um programa que simula um restaurante. O usuário escolhe um prato do menu (opções: pizza, hambúrguer, salada, macarrão) usando a instrução switch. Para cada prato escolhido, exiba o preço e a descrição do prato.</p>
+                <p>13. Crie um programa que simula um restaurante. O usuário escolhe um prato do menu usando a instrução switch. Para cada prato escolhido, exiba o preço e a descrição do prato.</p>
                 <div class="input-group">
                     <label for="prato13">Escolha um prato:</label>
                     <select id="prato13">
@@ -692,24 +692,170 @@
 
             <!-- Questão 43 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv43')">Mostrar Questão 43</button>
+                <div id="questionDiv43" class="question">
+                    <p>43. Crie uma String com uma frase e use o método toUpperCase para imprimir a frase em letras maiúsculas.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Frase em Maiúsculas</h1>
+                        <label for="numeroQ43">Digite uma frase:</label>
+                        <input type="text" id="numeroQ43" placeholder="Digite uma frase">
+                    </div>
+                    <button class="button-30" role="button" onclick="q43()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo43', q43Codigo)">Exibir o código</button>
+                    <div id="output43" class="result"></div>
+                    <pre id="codigo43" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 44 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv44')">Mostrar Questão 44</button>
+                <div id="questionDiv44" class="question">
+                    <p>44. Escreva um programa que solicita ao usuário o nome de 5 filmes e armazene em um Array. Em seguida, exiba no console cada um dos filmes informados usando um for tradicional.</p>
+                    <div class="input-group">
+                        <h1 style="text-align: center;">Filmes Favoritos</h1>
+                        <label for="numeroQ44-1">Filme 1:</label>
+                        <input type="text" id="numeroQ44-1" placeholder="Digite o nome filme 1">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ44-2">Filme 2:</label>
+                        <input type="text" id="numeroQ44-2" placeholder="Digite o nome filme 2">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ44-3">Filme 3:</label>
+                        <input type="text" id="numeroQ44-3" placeholder="Digite o nome filme 3">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ44-4">Filme 4:</label>
+                        <input type="text" id="numeroQ44-4" placeholder="Digite o nome filme 4">
+                    </div>
+                    <div class="input-group">
+                        <label for="numeroQ44-5">Filme 5:</label>
+                        <input type="text" id="numeroQ44-5" placeholder="Digite o nome filme 5">
+                    </div>
+                    <button class="button-30" role="button" onclick="q44()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo44', q44Codigo)">Exibir o código</button>
+                    <div id="output44" class="result"></div>
+                    <pre id="codigo44" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 45 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv45')">Mostrar Questão 45</button>
+                <div id="questionDiv45" class="question">
+                    <p>45. Crie um módulo que representa um banco de dados de usuários, armazenando informações como nome, email e senha de usuários. Utilize uma lista para armazenar os dados privados do usuário e defina funções para adicionar, remover e atualizar informações dos usuários. Somente as funções devem ser visíveis por módulos externos.</p>
+                    <h1 style="text-align: center;">Banco de Dados de Usuários</h1>
+                    <div class="input-group">
+                        <h2 style="text-align: center;">Adicionar Usuário</h2>
+                        <label for="addNome">Nome:</label>
+                        <input type="text" id="addNome" placeholder="Digite o nome">
+                        <label for="addEmail">Email:</label>
+                        <input type="email" id="addEmail" placeholder="Digite o email">
+                        <label for="addSenha">Senha:</label>
+                        <input type="password" id="addSenha" placeholder="Digite a senha">
+                        <button id="addUserBtn" class="button-30" role="button">Adicionar</button>
+                        <p id="addResultado"></p>
+                    </div>
+                    <div class="input-group">
+                        <h2 style="text-align: center;">Remover Usuário</h2>
+                        <label for="removeEmail">Email:</label>
+                        <input type="email" id="removeEmail" placeholder="Digite o email">
+                        <button id="removeUserBtn" class="button-30" role="button">Remover</button>
+                        <p id="removeResultado"></p>
+                    </div>
+                    <div class="input-group">
+                        <h2 style="text-align: center;">Atualizar Usuário</h2>
+                        <label for="updateEmail">Email Atual:</label>
+                        <input type="email" id="updateEmail" placeholder="Digite o email atual">
+                        <label for="updateNome">Novo Nome:</label>
+                        <input type="password" id="updateNome" placeholder="Digite o novo nome">
+                        <label for="updateNewEmail">Novo Email:</label>
+                        <input type="email" id="updateNewEmail" placeholder="Digite o novo email">
+                        <label for="updateSenha">Nova Senha:</label>
+                        <input type="password" id="updateSenha" placeholder="Digite a nova senha">
+                        <button id="updateUserBtn" class="button-30" role="button">Atualizar</button>
+                        <p id="updateResultado"></p>
+                    </div>
+                    <div class="input-group">
+                        <h2 style="text-align: center;">Lista de Usuários</h2>
+                        <div id="usersContainer"></div>
+                    </div>
+                    <button class="button-30" onclick="showCode('codigo45', q45Codigo)">Exibir o código</button>
+                    <div id="output45" class="result"></div>
+                    <pre id="codigo45" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 46 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv46')">Mostrar Questão 46</button>
+                <div id="questionDiv46" class="question">
+                    <p>46. Escreva um programa em JavaScript que utilize a biblioteca convert4 para converter dias em minutos e gigabytes em bytes.</p>
+                    <h1 style="text-align: center;">Conversões com Convert4</h1>
+                    <div class="input-group">
+                        <h2 style="text-align: center;">Converter Dias em Minutos</h2>
+                        <label for="dias">Dias:</label>
+                        <input type="number" id="diasQ46" placeholder="Digite a quantidade de dias">
+                        <button class="button-30" onclick="converterDiasEmMinutos()">Converter</button>
+                        <p id="output46"></p>
+                    </div>
+                    <div class="input-group">
+                        <h2 style="text-align: center;">Converter Gigabytes em Bytes</h2>
+                        <label for="gigabytesQ46">Gigabytes:</label>
+                        <input type="number" id="gigabytesQ46" placeholder="Digite a quantidade de gigabytes">
+                        <button class="button-30" onclick="converterGigabytesEmBytes()">Converter</button>
+                        <p id="output46"></p>
+                    </div>
+                    <button class="button-30" onclick="showCode('codigo46', q46Codigo)">Exibir o código</button>
+                    <div id="output46" class="result"></div>
+                    <pre id="codigo46" class="codigo"><code class="language-javascript"></code></pre>
+                    </div>
 
             <!-- Questão 47 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv47')">Mostrar Questão 47</button>
+                <div id="questionDiv47" class="question">
+                    <p>47. Crie uma página HTML que contenha uma caixa colorida, atributos da caixa: width: 200px;
+                        height: 200px;
+                        background-color: blue;
+                        margin: 20px;
+                        Em seguida, utilize o método addEventListener em JavaScript para alterar a cor da caixa quando o usuário passar o mouse sobre ela e quando o mouse sair dela. A cor da caixa deve mudar para vermelho ao passar o mouse e voltar para azul ao sair do mouse.
+                        </p>
+                    <h1 style="text-align: center;">Alteração de Cor ao Passar o Mouse</h1>
+                    <div class="input-groupQ47" id="minhaCaixa"></div>
+                    <button class="button-30" onclick="showCode('codigo47', q47Codigo)">Exibir o código</button>
+                    <div id="output47" class="result"></div>
+                    <pre id="codigo47" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 48 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv48')">Mostrar Questão 48</button>
+                <div id="questionDiv48" class="question">
+                    <p>48. Crie um programa que verifica se uma pessoa é elegível para um empréstimo com base em sua renda mensal e idade. O programa deve utilizar diferentes tipos de operadores, partir dos seguintes critérios:
+                        a.	A renda mensal deve ser maior que R$ 3000.
+                        b.	A idade deve ser entre 18 e 65 anos.</p>
+                    <h1 style="text-align: center;">Verificação de Elegibilidade para Empréstimo</h1>
+                    <div class="input-group">
+                        <label for="rendaMensalQ48">Renda Mensal (R$):</label>
+                        <input type="number" id="rendaMensalQ48" placeholder="Digite sua renda mensal">
+                    </div>
+                    <div class="input-group">
+                        <label for="idadeQ48">Idade:</label>
+                        <input type="number" id="idadeQ48" placeholder="Digite sua idade">
+                    </div>
+                    <button class="button-30" role="button" onclick="q48()">Verificar Elegibilidade</button>
+                    <button class="button-30" onclick="showCode('codigo48', q48Codigo)">Exibir o código</button>
+                    <div id="output48" class="result"></div>
+                    <pre id="codigo48" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 49 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv49')">Mostrar Questão 49</button>
+                <div id="questionDiv49" class="question">
+                    <p>49. Crie uma página HTML que solicita o nome do usuário e exibe uma mensagem de boas-vindas na própria página usando innerHTML.</p>
+                    <h1 style="text-align: center;">Bem-vindo(a)!</h1>
+                    <div class="input-group">
+                        <p>Por favor, digite seu nome abaixo:</p>
+                        <input type="text" id="nomeQ49" placeholder="Digite seu nome">
+                    </div>
+                    <button class="button-30" role="button" onclick="q49()">Exibir o resultado</button>
+                    <button class="button-30" onclick="showCode('codigo49', q49Codigo)">Exibir o código</button>
+                    <div id="output49" class="result"></div>
+                    <pre id="codigo49" class="codigo"><code class="language-javascript"></code></pre>
+                </div>
 
             <!-- Questão 50 -->
             <button class="button-30" role="button" onclick="showQuestion('questionDiv50')">Mostrar Questão 50</button>
@@ -730,6 +876,8 @@
       </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+    <script src="convert4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/convert4@1.0.0/dist/convert4.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

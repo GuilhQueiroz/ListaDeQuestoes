@@ -104,16 +104,6 @@ function q2Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {  
-    let codigoElement = document.getElementById('codigo2');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
-
 function q3() {
 
     // Obter os dados inseridos pelo usuário
@@ -144,16 +134,6 @@ function q3Codigo() {
     codigoElement.innerHTML = '';
     codigoElement.textContent = codigo;
     Prism.highlightElement(codigoElement);
-}
-
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo3');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
 }
 
 function q4() {
@@ -191,15 +171,6 @@ function q4Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo4');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q5() {
 
@@ -242,15 +213,6 @@ function q5Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo5');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q6() {
 
@@ -291,15 +253,6 @@ function q6Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo6');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q7() {
 
@@ -349,15 +302,6 @@ function q7Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo7');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q8() {
 
@@ -416,15 +360,6 @@ function q8Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo8');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q9() {
 
@@ -487,15 +422,6 @@ function q9Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo9');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q10() {
 
@@ -548,15 +474,6 @@ function q10Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo10');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q11() {
 
@@ -605,15 +522,6 @@ function q11Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo11');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q12() {
 
@@ -679,15 +587,6 @@ function q12Codigo() {
     Prism.highlightElement(codigoElement);
 }
 
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo12');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
-}
 
 function q13() {
 
@@ -729,56 +628,52 @@ function q13() {
 }
 
 function q13Codigo() {
+        
     
-
-    let codigo = `
-    function q13() {
-
-    let prato = document.getElementById('prato13').value;
-    let descricao = '';
-    let preco = '';
-
-    let resultado = document.getElementById('output13');
-
-    switch(prato) {
-
-        case 'pizza':
-            descricao = 'Pizza: Uma deliciosa pizza com molho de tomate, queijo';
-            preco = 'R$ 30.00';
-            break;
-
-        case 'hamburguer':
-            descricao = 'Hamburguer: Um delicioso hamburguer com carne, alface, tomate';
-            preco = 'R$ 25.00';
-            break;
-
-        case 'salada':
-            descricao = 'Salada: Uma salada fresca com alface, tomate, cenoura';
-            preco = 'R$ 10.00';
-            break;
-
-        case 'macarrao':
-            descricao = 'Macarrão: Um prato de macarrão com molho de tomate e queijo';
-            preco = 'R$ 20.00';
-            break;
-
-        default:
-            descricao = 'Prato não encontrado';
-            preco = '';
-    }   
-
-    resultado.innerHTML = descricao + '<br>' + 'Preço: ' + preco;
+        let codigo = `
+        function q13() {
+    
+        let prato = document.getElementById('prato13').value;
+        let descricao = '';
+        let preco = '';
+    
+        let resultado = document.getElementById('output13');
+    
+        switch(prato) {
+            
+            case 'pizza':
+                descricao = 'Pizza: Uma deliciosa pizza com molho de tomate, queijo';
+                preco = 'R$ 30.00';
+                break;
+    
+            case 'hamburguer':
+                descricao = 'Hamburguer: Um delicioso hamburguer com carne, alface, tomate';
+                preco = 'R$ 25.00';
+                break;
+    
+            case 'salada':
+                descricao = 'Salada: Uma salada fresca com alface, tomate, cenoura';
+                preco = 'R$ 10.00';
+                break;
+    
+            case 'macarrao':
+                descricao = 'Macarrão: Um prato de macarrão com molho de tomate e queijo';
+                preco = 'R$ 20.00';
+                break;
+    
+            default:
+                descricao = 'Prato não encontrado';
+                preco = '';
+        }
+    
+        resultado.innerHTML = descricao + '<br>' + 'Preço: ' + preco;
     }`;
-}
-
-function toggleCodigo() {
-    let codigoElement = document.getElementById('codigo13');
-    if (codigoVisivel) {
-        codigoElement.style.display = 'none';
-    } else {
-        codigoElement.style.display = 'block';
-    }
-    codigoVisivel = !codigoVisivel;
+    
+        let codigoElement = document.getElementById('codigo13');
+        codigoElement.innerHTML = '';
+        codigoElement.textContent = codigo;
+        Prism.highlightElement(codigoElement);
+    
 }
 
 
@@ -879,6 +774,12 @@ function q14Codigo() {
     }
     resultado.innerHTML = 'Seu IMC é ' + imc.toFixed(2) + '<br>' + 'Classificação: ' + classificacao;
 }`;
+
+    let codigoElement = document.getElementById('codigo14');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 }
 
 function q15() {
@@ -2255,31 +2156,322 @@ function q42Codigo() {
 }
 
 function q43() {
+    const frase = document.getElementById('numeroQ43').value;
+    const fraseMaiuscula = frase.toUpperCase();
 
+    const resultadoElement = document.getElementById('output43');
+    resultadoElement.textContent = `Frase em Maiúsculas: ${fraseMaiuscula}`;
 }
 
-function q44() {
+function q43Codigo() {
+        
+            let codigo = `
+            function q43() {
+                const frase = document.getElementById('numeroQ43').value;
+                const fraseMaiuscula = frase.toUpperCase();
+            
+                const resultadoElement = document.getElementById('output43');
+                resultadoElement.textContent = 'Frase em Maiúsculas: ' + fraseMaiuscula;
+            }`;
+        
+            let codigoElement = document.getElementById('codigo43');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+                    
+        }
 
+function q44() {
+    const filmes = [
+        document.getElementById('numeroQ44-1').value,
+        document.getElementById('numeroQ44-2').value,
+        document.getElementById('numeroQ44-3').value,
+        document.getElementById('numeroQ44-4').value,
+        document.getElementById('numeroQ44-5').value
+    ];
+
+    for (let i = 0; i < filmes.length; i++) {
+        console.log(filmes[i]);
+    }
+
+    const resultadoElement = document.getElementById('output44');
+    resultadoElement.textContent = `Filmes informados: ${filmes.join(', ')}`;
+}
+
+function q44Codigo(){
+        
+            let codigo = `
+            function q44() {
+                const filmes = [
+                    document.getElementById('numeroQ44-1').value,
+                    document.getElementById('numeroQ44-2').value,
+                    document.getElementById('numeroQ44-3').value,
+                    document.getElementById('numeroQ44-4').value,
+                    document.getElementById('numeroQ44-5').value
+                ];
+            
+                for (let i = 0; i < filmes.length; i++) {
+                    console.log(filmes[i]);
+                }
+            
+                const resultadoElement = document.getElementById('output44');
+                resultadoElement.textContent = 'Filmes informados: ' + filmes.join(', ');
+            }`;
+        
+            let codigoElement = document.getElementById('codigo44');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+                    
+        
 }
 
 function q45() {
 
+    function adicionarUsuario() {
+        const nome = document.getElementById('addNome').value;
+        const email = document.getElementById('addEmail').value;
+        const senha = document.getElementById('addSenha').value;
+        const resultado = addUser(nome, email, senha);
+        document.getElementById('addResultado').textContent = resultado;
+        atualizarListaUsuarios();
+    
+        console.log(atualizarListaUsuarios());
+    }
+    
+    function removerUsuario() { 
+        const email = document.getElementById('removeEmail').value;
+        const resultado = removeUser(email);
+        document.getElementById('removeResultado').textContent = resultado;
+        atualizarListaUsuarios();
+    }
+    
+    function atualizarUsuario() {
+        const email = document.getElementById('updateEmail').value;
+        const newNome = document.getElementById('updateNome').value;
+        const newEmail = document.getElementById('updateNewEmail').value;
+        const newSenha = document.getElementById('updateSenha').value;
+        const resultado = updateUser(email, newNome, newEmail, newSenha);
+        document.getElementById('updateResultado').textContent = resultado;
+        atualizarListaUsuarios();
+    }
+    
+    function atualizarListaUsuarios() {
+        const usersList = listUsers();
+        const usersContainer = document.getElementById('usersContainer');
+        usersContainer.innerHTML = '';
+        usersList.forEach(user => {
+            const userDiv = document.createElement('div');
+            userDiv.textContent = `Nome: ${user.nome}, Email: ${user.email}, Senha: ${user.senha}`;
+            usersContainer.appendChild(userDiv);
+        });
+    }
+    
+    document.getElementById('addButton').addEventListener('click', adicionarUsuario);
+    document.getElementById('removeButton').addEventListener('click', removerUsuario);
+    document.getElementById('updateButton').addEventListener('click', atualizarUsuario);
+    
+    document.addEventListener('DOMContentLoaded', atualizarListaUsuarios);
+    }
+    
+function q45Codigo() {
+
+    let codigo = `
+    function adicionarUsuario() {
+        const nome = document.getElementById('addNome').value;
+        const email = document.getElementById('addEmail').value;
+        const senha = document.getElementById('addSenha').value;
+        const resultado = addUser(nome, email, senha);
+        document.getElementById('addResultado').textContent = resultado;
+        atualizarListaUsuarios();
+    
+        console.log(atualizarListaUsuarios());
+    }
+    
+    function removerUsuario() { 
+        const email = document.getElementById('removeEmail').value;
+        const resultado = removeUser(email);
+        document.getElementById('removeResultado').textContent = resultado;
+        atualizarListaUsuarios();
+    }
+    
+    function atualizarUsuario() {
+        const email = document.getElementById('updateEmail').value;
+        const newNome = document.getElementById('updateNome').value;
+        const newEmail = document.getElementById('updateNewEmail').value;
+        const newSenha = document.getElementById('updateSenha').value;
+        const resultado = updateUser(email, newNome, newEmail, newSenha);
+        document.getElementById('updateResultado').textContent = resultado;
+        atualizarListaUsuarios();
+    }
+    
+    function atualizarListaUsuarios() {
+        const usersList = listUsers();
+        const usersContainer = document.getElementById('usersContainer');
+        usersContainer.innerHTML = '';
+        usersList.forEach(user => {
+            const userDiv = document.createElement('div');
+            userDiv.textContent = 'Nome: ' + user.nome + ', Email: ' + user.email + ', Senha: ' + user.senha;
+            usersContainer.appendChild(userDiv);
+        });
+    }
+    
+    document.getElementById('addButton').addEventListener('click', adicionarUsuario);
+    document.getElementById('removeButton').addEventListener('click', removerUsuario);
+    document.getElementById('updateButton').addEventListener('click', atualizarUsuario);
+    
+    document.addEventListener('DOMContentLoaded', atualizarListaUsuarios);`;
+
+    let codigoElement = document.getElementById('codigo45');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 }
 
-function q46() {
+
+
+function converterDiasEmMinutos() {
+    const dias = parseInt(document.getElementById('diasQ46').value);
+    const minutos = Converter4.daysToMinutes(dias);
+    document.getElementById('output46').textContent = `${dias} dias são equivalentes a ${minutos} minutos.`;
+}
+
+function converterGigabytesEmBytes() {
+    const gigabytes = parseFloat(document.getElementById('gigabytesQ46').value);
+    const bytes = Converter4.gigabytesToBytes(gigabytes);
+    document.getElementById('output46').textContent = `${gigabytes} gigabytes são equivalentes a ${bytes} bytes.`;
+}
+
+function q46Codigo() {
+
+    let codigo = `
+    class Converter4 {
+        static daysToMinutes(days) {
+            return days * 24 * 60;
+        }
+    
+        static gigabytesToBytes(gigabytes) {
+            return gigabytes * 1024 * 1024 * 1024;
+        }
+    }
+    
+    function converterDiasEmMinutos() {
+        const dias = parseInt(document.getElementById('diasQ46').value);
+        const minutos = Converter4.daysToMinutes(dias);
+        document.getElementById('output46').textContent = dias + ' dias são equivalentes a ' + minutos + ' minutos.';
+    }
+    
+    function converterGigabytesEmBytes() {
+        const gigabytes = parseFloat(document.getElementById('gigabytesQ46').value);
+        const bytes = Converter4.gigabytesToBytes(gigabytes);
+        document.getElementById('output46').textContent = gigabytes + ' gigabytes são equivalentes a ' + bytes + ' bytes.';
+    }`;
+
+    let codigoElement = document.getElementById('codigo46');
+    codigoElement.innerHTML = '';
+    codigoElement.textContent = codigo;
+
+    Prism.highlightElement(codigoElement);
 
 }
 
-function q47() {
+const caixa = document.getElementById('minhaCaixa');
+caixa.addEventListener('mouseover', q47);
+caixa.addEventListener('mouseout', q47);
 
+function q47(evento) {
+    const caixa = document.getElementById('minhaCaixa');
+    if (evento.type === 'mouseover') {
+        caixa.style.backgroundColor = 'red'; 
+    } else if (evento.type === 'mouseout') {
+        caixa.style.backgroundColor = 'blue'; 
+    }
+}
+
+function q47Codigo() {
+    
+        let codigo = `
+        const caixa = document.getElementById('minhaCaixa');
+        caixa.addEventListener('mouseover', q47);
+        caixa.addEventListener('mouseout', q47);
+        
+        function q47(evento) {
+            const caixa = document.getElementById('minhaCaixa');
+            if (evento.type === 'mouseover') {
+                caixa.style.backgroundColor = 'red'; 
+            } else if (evento.type === 'mouseout') {
+                caixa.style.backgroundColor = 'blue'; 
+            }
+        }`;
+    
+        let codigoElement = document.getElementById('codigo47');
+        codigoElement.innerHTML = '';
+        codigoElement.textContent = codigo;
+    
+        Prism.highlightElement(codigoElement);
+    
+    
 }
 
 function q48() {
+    const rendaMensal = parseFloat(document.getElementById('rendaMensalQ48').value);
+    const idade = parseInt(document.getElementById('idadeQ48').value);
 
+    if (rendaMensal >= 3000 && idade >= 18 && idade <= 65) {
+        document.getElementById('output48').textContent = 'Você pode solicitar um cartão de crédito.';
+    } else {
+        document.getElementById('output48').textContent = 'Você não pode solicitar um cartão de crédito.';
+    }
+}
+
+function q48Codigo() {
+        
+            let codigo = `
+            function q48() {
+                const rendaMensal = parseFloat(document.getElementById('rendaMensalQ48').value);
+                const idade = parseInt(document.getElementById('idadeQ48').value);
+            
+                if (rendaMensal >= 3000 && idade >= 18 && idade <= 65) {
+                    document.getElementById('output48').textContent = 'Você pode solicitar um cartão de crédito.';
+                } else {
+                    document.getElementById('output48').textContent = 'Você não pode solicitar um cartão de crédito.';
+                }
+            }`;
+        
+            let codigoElement = document.getElementById('codigo48');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+        
+    
 }
 
 function q49() {
+    const nome = document.getElementById('nomeQ49').value;
+    const mensagem = `Olá, ${nome}! Seja bem-vindo!`;
+    document.getElementById('output49').innerHTML = mensagem;
+}
 
+function q49Codigo() {
+        
+            let codigo = `
+            function q49() {
+                const nome = document.getElementById('nomeQ49').value;
+                const mensagem = 'Olá, ' + nome + '! Seja bem-vindo!';
+                document.getElementById('output49').innerHTML = mensagem;
+            }`;
+        
+            let codigoElement = document.getElementById('codigo49');
+            codigoElement.innerHTML = '';
+            codigoElement.textContent = codigo;
+        
+            Prism.highlightElement(codigoElement);
+        
+    
 }
 
 function q50() {
